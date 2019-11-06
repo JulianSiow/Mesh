@@ -3,6 +3,7 @@ from django.core import serializers
 from django.contrib.auth.decorators import login_required
 
 from .models import User, Event
+from .forms import Event
 # Create your views here.
 
 def profile_create(request):
@@ -16,10 +17,11 @@ def profile_create(request):
     context = {'form': form}
     return render(request, '____', context)
 
+@login_required
 def event_create(request):
     user = User.object.get(id=pk)
     if request.method == 'POST':
-        form = EventForm(request.POST)
+        form = Event(request.POST)
         if form.is_valid():
             event = form.save(commit=False)
             event.creator = user
@@ -38,6 +40,46 @@ def event_page(request,pk):
     event = Event.objects.get(id=pk)
     context = {"event": event}
     return render(request, '____', context)
+
+@login_required
+def event_edit(request, pk, event_pk):
+    event = Event.objects.get(id=pk)
+    if request.method == 'POST':
+        form = Event(request.POST, instance= event)
+        if form.is_valid():
+            event = form.save()
+            return redirect('____', pk= event.pk)
+    else:
+        form = Event()
+    context = {'form': form,'header': "Edit this event"}
+    return render(request, '_____', context)
+
+@login_required
+def update_profile(request, pk):
+    user = User.objects.get(id=pk)
+    if request.method == 'POST':
+        user_form = UserForm(request.POST, instance = request.user)
+        profile_form = ProfileForm(request.POST, instance = request.user.profile)
+        if user_form.is_valid() and profile_form.is_valid():
+            user_form.save()
+            profile_form.save()
+            return redirect('___')
+        else:
+            messages.error(request,_('Please correct the fields and submit again.'))
+    else:
+        user_form = UserForm(instance = request.user)
+        profile_form = ProfileForm(instace = request.user.profile)
+    return render(request, '____',{
+        'user_form': user_form,
+        'profile_form': profile_form
+    })
+
+
+
+
+
+
+
 
 
 

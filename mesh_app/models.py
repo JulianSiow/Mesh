@@ -10,12 +10,12 @@ class Profile(models.Model):
     portfolio_link = models.TextField()
     linkedin = models.TextField()
 
-    @reciever(post_save, sender=User)
+    @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
             Profile.objects.create(user=instance)
     
-    @reciever(post_save, sender=User)
+    @receiver(post_save, sender=User)
     def save_user_profile(sender, instance, **kwargs):
         instance.profile.save()
 
