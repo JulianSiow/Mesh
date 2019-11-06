@@ -22,4 +22,45 @@ def register(req):
         if password == password2:
             if User.objects.filter(username=username).exists():
                 context = {'error':'Username is already taken'}
-                return render(req, '')
+                return render(req, 'register.html', context)
+            else: 
+                user = User.objects.create_user(
+                    username=username,
+                    email=email,
+                    password=password,
+                    first_name=first_name,
+                    last_name=last_name,
+                )
+                profile = Profile.objects.create_profile(
+                    prof_pic=prof_pic,
+                    field=field,
+                    portfolio_link=portfolio_link,
+                    linkedin=linkedin,
+                )
+                user.save()
+                profile.save()
+            return redirect('events')
+        else:
+            context = {'error':'Passwords do not match'}
+            return render(req, 'register.html', context)
+    else:
+        return render(req, 'register.html')
+
+def login(req):
+    if req.method == 'POST':
+        username = req.POST['username']
+        password = req.POST['password']
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(req, user)
+            return redirect('events')
+        else:
+            context = {'error':'Username or password is incorrect, please try again.'}
+            return render(req, 'login.html', context)
+    else:
+        return render(req, 'login.html')
+
+def logout(req):
+    auth.logout(req)
+    return redirect('landing_page')
