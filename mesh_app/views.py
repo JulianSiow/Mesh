@@ -20,7 +20,7 @@ def event_create(request):
     user = User.object.get(id=pk)
     if request.method == 'POST':
         form = EventForm(request.POST)
-        if form.is_valud():
+        if form.is_valid():
             event = form.save(commit=False)
             event.creator = user
             return redirect('____', pk = event.pk)
@@ -28,5 +28,24 @@ def event_create(request):
             form = EventForm()
         context = {'form': form, 'header':"Add an Event!"}
         return render(request,'____', context)
+
+def event_browse(request):
+    event = Event.objects.all()
+    context = {"event": event}
+    return render(request, '____', context)
+
+def event_page(request,pk):
+    event = Event.objects.get(id=pk)
+    context = {"event": event}
+    return render(request, '____', context)
+
+
+
+
+
+
+
+
+
 
 
