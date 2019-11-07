@@ -20,6 +20,7 @@ def profile_create(request):
     context = {'form': form}
     return render(request, '____', context)
 
+
 def profile_page(request):
     user = User.objects.get(id=pk)
     context = {"user": user}

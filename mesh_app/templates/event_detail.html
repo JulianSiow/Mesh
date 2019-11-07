@@ -3,10 +3,22 @@
 {% block content %}
 <section class = "event-header" style ="background-image:url({{event.photo_url}})">
     <section class = "event-info">
-        <h2>{{}}</h2>
+        <h2>
+            {{event.title}}
+        </h2>
+        <h4>
+            Created by {{event.creator}}
+        </h4>
     </section>
 </section>
 
+<section class = "event-info">
+    <h2 class = "description"> Description </h2>
+    <h4 class ="event-type"> {{event.type}}</h4>
+    <p class ="event-description">
+        {{event.description}}
+    </p>
+</section>
 {% endfor %}
 
 {% endblock %}
