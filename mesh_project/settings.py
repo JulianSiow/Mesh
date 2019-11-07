@@ -79,6 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'mesh', 
+        'USER': 'andym',
+        'PASSWORD': '12345' 
 
     }
 }

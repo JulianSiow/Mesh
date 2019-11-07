@@ -20,6 +20,11 @@ def profile_create(request):
     context = {'form': form}
     return render(request, '____', context)
 
+def profile_page(request):
+    user = User.objects.get(id=pk)
+    context = {"user": user}
+    return render(request,'profile.html', context)
+
 @login_required
 def event_create(request):
     user = User.object.get(id=pk)
