@@ -10,6 +10,7 @@ urlpatterns = [
     # path('event/', views.event),
     # path('user/<int:pk>/event/edit/', views_event_edit, name='event_edit'),
     # path('user/<int:pk>/event/delete/', views_event_delete, name='event_delete')
+    # path('user/<int:pk>/event/join', views.event_join, name='event_join')
 ]
 
 

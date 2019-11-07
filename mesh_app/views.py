@@ -7,7 +7,6 @@ from .forms import Event
 # Create your views here.
 
 def landing (request):
-    
     return render (request, 'landing.html')
 
 def profile_create(request):

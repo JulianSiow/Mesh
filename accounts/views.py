@@ -22,7 +22,7 @@ def register(req):
         if password == password2:
             if User.objects.filter(username=username).exists():
                 context = {'error':'Username is already taken'}
-                return render(req, 'register.html', context)
+                return render(req, 'sign_up.html', context)
             else: 
                 user = User.objects.create_user(
                     username=username,
@@ -42,9 +42,9 @@ def register(req):
             return redirect('events')
         else:
             context = {'error':'Passwords do not match'}
-            return render(req, 'register.html', context)
+            return render(req, 'sign_up.html', context)
     else:
-        return render(req, 'register.html')
+        return render(req, 'sign_up.html')
 
 def login(req):
     if req.method == 'POST':
