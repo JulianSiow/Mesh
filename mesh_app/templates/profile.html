@@ -6,17 +6,15 @@ test profile page by Big Herm
 <div class="container">
     <div class="userInfo">
 
-    <img src= "{% static 'images/marius-ciocirlan-vMV6r4VRhJ8-unsplash.jpg' %}">
-    <!-- <a href="{% url 'song_edit pk=song.artists.pk song_pk=song.pk %}" class="song-edit">Edit</a>    </div> -->
+
 Picture:
 
 
-<p class="profName">Name:</p>
+<p class="profName">Name:{{user.first_name}}</p>
 <p class="profUName">User Name:</p>
-User:
-Field
-Portfolio
-linkedin = models.TextField()
+<p class="proField">Field:</p>
+<p class="profPort">Portfolio:</p>
+<p class="proLink">LinkedIn:</p>
 </div>
 
 
