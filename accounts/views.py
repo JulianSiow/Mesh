@@ -31,14 +31,13 @@ def register(req):
                     first_name=first_name,
                     last_name=last_name,
                 )
-                profile = Profile.objects.create_profile(
-                    prof_pic=prof_pic,
-                    field=field,
-                    portfolio_link=portfolio_link,
-                    linkedin=linkedin,
-                )
                 user.save()
-                profile.save()
+                user.profile.prof_pic = prof_pic
+                user.profile.field = field
+                user.profile.portfolio_link = portfolio_link
+                user.profile.linkedin = linkedin
+                user.profile.save()
+
             return redirect('events')
         else:
             context = {'error':'Passwords do not match'}

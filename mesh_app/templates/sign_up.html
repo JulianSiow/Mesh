@@ -4,9 +4,48 @@
 {% block content %}
 
 <section>
-    <form method="POST">
+    <form action="{% url 'register' %}" method="POST">
         {% csrf_token %}
-        {{form.as_p}}
+        <p>
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" maxlength="25" minlength="2" required>
+        </p>
+        <p>
+            <label for="last_name">Last Name</label>
+            <input type="text" name="last_name" maxlength="25" minlength="2" required>
+        </p>
+        <p>
+            <label for="username">Username</label>
+            <input type="text" name="username" maxlength="25" minlength="4" required>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="email" name="email" maxlength="25" minlength="3" required>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="password" name="password" maxlength="25" minlength="4" required>
+        </p>
+        <p>
+            <label for="password2">Confirm your password</label>
+            <input type="password" name="password2" maxlength="25" minlength="4" required>
+        </p>
+        <p>
+            <label for="prof_pic">Link to a profile picture</label>
+            <input type="text" name="prof_pic">
+        </p>
+        <p>
+            <label for="field">What field are you employed in?</label>
+            <input type="text" name="field">
+        </p>
+        <p>
+            <label for="portfolio_link">Link to your portfolio</label>
+            <input type="text" name="portfolio_link">
+        </p>
+        <p>
+            <label for="linkedin">Linkedin</label>
+            <input type="text" name="linkedin">
+        </p>
         <button type="submit">Sign Up</button>
     </form>
 </section>
