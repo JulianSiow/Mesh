@@ -21,7 +21,8 @@
 </head>
 
 <body>
-    <h1 id='coName'>Mesh - Extend your professional network</h1>
+    <h1 id='coName'>Mesh</h1>
+    <h3 id='coTagLine'>Extend your professional network</h3>
 
 <nav class="navbar navbar-default navbar-inverse">
     <div class="container-fluid">
@@ -130,15 +131,35 @@
 
 
 
-<div>VALUE PROP</div>
-<img src="static/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="">
-<div>LOGIN</div>
+<div class="valueProp container">
+  <h2 class="valuePropTitle">Testimonials</h2>
+  <div class="valueProp1">
+    <img class="valueProp1Img" src="static/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="">
+  </div>
+  <div class="valueProp2">
+    <img class="valueProp2Img" src="static/images/marius-ciocirlan-vMV6r4VRhJ8-unsplash.jpg" alt="">
+  </div>
+  <div class="valueProp3">
+    <img class="valueProp3Img" src="" alt="">
+  </div>
+</div>
 
+<br> 
+<br>
+<br>
 
-
-
-{% block content %}
-{% endblock %}
-
+<form class="login">
+    <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+    <p>
+        <label for="username">Username</label>
+        <input type='text' name='username' maxlength='20' minlength='6' required>
+    </p>
+    <p>
+        <label for="password">Password</label>
+        <input type='password' name='password' maxlength='20' minlength='6' required>
+    </p>
+    <button type='submit'>Log In</button>
+</form>
 </body>
 </html>
