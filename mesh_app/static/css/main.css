@@ -1,33 +1,69 @@
-html {
+/* html {
     background-color: chartreuse;
-}
+} */
 /* ------------------ TOP NAV - BOOTSTRAP OVERRIDES ------------------ */
 
+.navbar {
+    position: relative;
+    width: 99%
+    min-height: 50px;
+    margin-bottom: 1px;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-bottom: 1px;
+    margin-left: auto;
+    border: 2px solid transparent;
+}
 
 
 
+
+
+/* -------------------GLOBAL ITEMS -------------------- */
+#coName {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 20px;
+}
 
 
 
 /* ------------------- LANDING PAGE ------------------- */
-/* /* .topNav {
-    /* font-family: ; */
-    /* font-weight: ; */
-    /* background-color: coral;
-    display: block;
-    border: black 1px solid; */
-    /* margin: 1%;
- */
 
-.caroImage1 {
-    width: 80%;
-    height: 80%;
+/* .caroImage1 {
+    width: 90%;
+    height: 50%;
     margin: 0 auto;
 }
 
+.caroImage2 {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+}
 
+.caroImage3 {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+}
 
+.caroImage4 {
+    width: 90%;
+    height: 50%;
+    margin: 0 auto;
+}
+.sr-only {
+    vertical-align: center;
+}  */
 
+.caroImage4 {
+    width: auto;
+    height: 300px;
+    margin: 0 auto;
+}
 
 /* ------------------- PROFILE PAGE ------------------- */
 
