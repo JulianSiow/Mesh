@@ -6,6 +6,10 @@ from .models import User, Event
 from .forms import Event
 # Create your views here.
 
+def landing (request):
+    
+    return render (request, 'landing.html')
+
 def profile_create(request):
     if request.method == 'POST':
         form = ProfileForm(request.POST)
@@ -55,7 +59,7 @@ def event_edit(request, pk, event_pk):
     return render(request, '_____', context)
 
 @login_required
-def update_profile(request, pk):
+def profile_edit(request, pk):
     user = User.objects.get(id=pk)
     if request.method == 'POST':
         user_form = UserForm(request.POST, instance = request.user)
@@ -73,6 +77,7 @@ def update_profile(request, pk):
         'user_form': user_form,
         'profile_form': profile_form
     })
+
 
 
 
