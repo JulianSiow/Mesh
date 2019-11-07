@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 # Create your models here.
 
@@ -10,12 +12,12 @@ class Profile(models.Model):
     portfolio_link = models.TextField()
     linkedin = models.TextField()
 
-    @reciever(post_save, sender=User)
+    @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
             Profile.objects.create(user=instance)
     
-    @reciever(post_save, sender=User)
+    @receiver(post_save, sender=User)
     def save_user_profile(sender, instance, **kwargs):
         instance.profile.save()
 
@@ -41,5 +43,5 @@ class Attendees(models.Model):
     attendee = models.ForeignKey(User, on_delete=models.CASCADE, related_name='attendee')
 
 class Friends(models.Model):
-    friend1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friend')
-    friend2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friend')
+    friend1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friend2')
+    friend2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friend1')

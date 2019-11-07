@@ -10,16 +10,20 @@ html {
 
 
 /* ------------------- LANDING PAGE ------------------- */
-/* .topNav {
+/* /* .topNav {
     /* font-family: ; */
     /* font-weight: ; */
-    background-color: coral;
+    /* background-color: coral;
     display: block;
-    border: black 1px solid;
-    margin: 1%; */
+    border: black 1px solid; */
+    /* margin: 1%;
+ */
 
+.caroImage1 {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
 }
-
 
 
 
