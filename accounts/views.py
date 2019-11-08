@@ -63,4 +63,4 @@ def login(req):
 
 def logout(req):
     auth.logout(req)
-    return redirect('landing_page')
+    return redirect('landing')
