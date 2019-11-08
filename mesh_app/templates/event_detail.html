@@ -1,6 +1,7 @@
 {% extends 'landing.html' %}
 
 {% block content %}
+<div class = "trial">
 <section class = "event-header" style ="background-image:url({{event.picture}})">
     <section class = "event-info">
         <h2>
@@ -14,7 +15,7 @@
         </div>
     </section>
 </section>
-
+</div>
 <section class = "event-info">
     <h2 class = "description"> Description </h2>
     <h4 class ="event-type"> {{event.field}}</h4>
