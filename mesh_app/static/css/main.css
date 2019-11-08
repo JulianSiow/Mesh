@@ -74,7 +74,7 @@
 }
 
 .valueProp1Img {
-    width: 300px;
+    width: 200px;
     height: 300px;
     border-radius: 50%;
     border: solid 2px red;
@@ -95,6 +95,16 @@
     margin-left: 60px;
 }
 
+.valueProp3Img {
+    width: 400px;
+    height: 300px;
+    border-radius: 50%;
+    border: solid 2px red;
+}
+
+.valueProp3 {
+    margin-left: 60px;
+}
 /* ------------------- PROFILE PAGE ------------------- */
 
 .profField {
