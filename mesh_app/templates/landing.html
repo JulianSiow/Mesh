@@ -55,29 +55,41 @@
   <p>{{error}}</p>
 {% endif %}
 
+<!-------- Value Prop ------->
+<div class="flex-grid">
+    <div class="col">
+Value Prop
+</div>
+        <div class="col">
+          Login
+</div>
+
+<!-- ------ Login ----- -->
+<div class="flex-grid">
+    <div class="col">
+
+
+
+  <div class="col">
+    <div class="bg-img login">
+      <form class="signin" action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+        <p>
+            <label for="username">Username</label>
+            <input type='text' name='username' maxlength='20' minlength='4' required>
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type='password' name='password' maxlength='20' minlength='4' required>
+        </p>
+        <button class="btn" type='submit'>Log In</button>
+      </form>
+      </div>
+  </div>
 
 <!-------- Testimonials ------->
-
-  <h2 class="valuePropTitle">Testimonials</h2>
-  <br><br><br>
-  <div class="flex-grid testimonials">
-  <div class="col">
-          <div class="bg-img login">
-          <form class="signin" action="{% url 'login' %}" method="POST">
-                {% csrf_token %}
-            <p>
-                <label for="username">Username</label>
-                <input type='text' name='username' maxlength='20' minlength='4' required>
-            </p>
-            <p>
-                <label for="password">Password</label>
-                <input type='password' name='password' maxlength='20' minlength='4' required>
-            </p>
-            <button class="btn" type='submit'>Log In</button>
-          </form>
-          </div>
-    <p></p>
-  </div>
+<h2 class="valuePropTitle">Testimonials</h2>
+  <div class="flex-grid">
   <div class="col">
     <img class="valueProp1Img" src="static/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="">
     <p>Ingrid - I love using Mesh's service to meet fellow UX Managers. Being able to exchange ideas is so invaluable!</p>
@@ -89,7 +101,7 @@
   <div class="col">
     <img class="valueProp3Img" src="static/images/harps-joseph-tAvpDE7fXgY-unsplash.jpg" alt="">
   <p>Lincoln - Amazing. That's all I got. Time to get back to coding. </p>
-  </div>
+</div>
 </div>
 
 <br> 
