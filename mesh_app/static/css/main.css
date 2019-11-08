@@ -8,7 +8,6 @@
     width: 99%;
     min-height: 50px;
     margin-bottom: 1px;
-    margin-top: 5px;
     margin-right: auto;
     margin-bottom: 1px;
     margin-left: auto;
@@ -21,16 +20,17 @@
 
 /* -------------------GLOBAL ITEMS -------------------- */
 #coName {
-    display: inline;
     font-family: 'Orbitron', sans-serif;
     font-size: 36px;
-    padding-top: 10px;
-
+    margin-top: 10px;
+    margin-left: 20px;
+    display: inline;
 }
 
 #coTagLine {
     display: inline;
     padding-left: 50px;
+    margin-top: 10px;
 }
 
 
@@ -94,9 +94,23 @@
 .valueProp2 {
     margin-left: 60px;
 }
+
 /* ------------------- PROFILE PAGE ------------------- */
 
+.profField {
+    font-size: 18px;
+    font-weight: 400;
+    color: red;
+    display: inline;
+}
 
+.profFieldVal {
+    font-size: 16px;
+    color: blue;
+    display: inline;
+    padding-left: 20px;
+    
+}
 
 
 
