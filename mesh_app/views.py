@@ -43,7 +43,7 @@ def event_create(request, pk):
 def event_browse(request):
     event = Event.objects.all()
     context = {"event": event}
-    return render(request, 'event_browse.html', context)
+    return render(request, 'events.html', context)
 
 def event_page(request,pk):
     event = Event.objects.get(id=pk)
