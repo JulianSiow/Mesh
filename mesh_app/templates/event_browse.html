@@ -6,7 +6,7 @@
 {% for event in event %}
 <div class="col-sm-4" id ="columns">
     <div class="event_card" >
-        <a href="/event/{{event.pk}}">
+        <a href="{% url 'event_page' event_pk=event.pk %}">
         <img class ="event_image"src="{{event.picture}}">
         <div class="event_container">
         <h4><b>{{event.title}}</b></h4>

@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.core import serializers
 from django.contrib.auth.decorators import login_required
 
-from .models import User, Event
+from .models import User, Event, Attendees
 from .forms import EventForm
 # Create your views here.
 
@@ -39,6 +39,13 @@ def event_create(request, pk):
         form = EventForm()
     context = {'form': form, 'header':"Add an Event!"}
     return render(request,'event_form.html', context)
+
+def event_join(request, event_pk, pk):
+    user = User.objects.get(id=pk)
+    event = Event.objects.get(id=event_pk)
+    user_join = Attendees(event=event, user=user)
+    user_join.save()
+
 
 def event_browse(request):
     event = Event.objects.all()
