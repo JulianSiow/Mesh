@@ -1,21 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-test profile page by Big Herm
 
 <div class="container">
     <div class="userInfo">
 
 
 Picture:
+<img src ="{{user.prof_pic}}">
 
 
-<p class="profName">Name:{{user.first_name}}</p>
-<p class="profUName">User Name:</p>
-<p class="proField">Field:</p>
-<p class="profPort">Portfolio:</p>
-<p class="proLink">LinkedIn:</p>
-</div>
+
+<br>
+<p class="profField">First Name:</p><p class="profFieldVal">{{user.first_name}}</p><br>
+<p class="profField">Last Name:</p><p class="profFieldVal">{{user.last_name}}</p><br>
+<p class="profField">User Name:</p><p class="profFieldVal">{{user.username}}</p><br>
+<p class="profField">Field:</p><p class="profFieldVal">{{user.profile.field}}</p><br>
+<p class="profField">Portfolio:</p><p class="profFieldVal">{{user.profile.portfolio_link}}</p><br>
+<p class="profField">LinkedIn:</p><p class="profFieldVal">{{user.profile.linkedin}}</p>
+</div>.
+
 
 
 
