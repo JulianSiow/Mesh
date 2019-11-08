@@ -54,7 +54,8 @@
   {% if error %}
   <p>{{error}}</p>
 {% endif %}
-<div class="bg-img">
+
+<div class="bg-img login">
 <form action="{% url 'login' %}" method="POST">
       {% csrf_token %}
   <p>
