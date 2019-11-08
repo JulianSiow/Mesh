@@ -1,6 +1,4 @@
-/* html {
-    background-color: chartreuse;
-} */
+
 /* ------------------ TOP NAV - BOOTSTRAP OVERRIDES ------------------ */
 
 .navbar {
@@ -47,88 +45,131 @@
 /* ----------- Login Form --------- */
 .login {
   float: right;
+  margin-left: 20px;
 }
 
 
 /* ------- Testimonials ---------*/
 .flex-grid {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 .col {
-    flex: 3;
+    flex: 1;
   }
 
 .flex-grid-thirds {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
   }
 .flex-grid-thirds .col {
-    width: 20%;
+  width: 30%;
 }
 
 .valuePropTitle {
-    margin-left: 30%;
+  margin-left: 45%;
 }
 
 .valueProp1Img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: solid 2px red;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 2px red;
+  margin-bottom: 15px;
 }
 
 .valueProp1 {
-    margin-left: 60px;
-    /* float: left; */
+  margin-left: 60px;
+
 }
 
 .valueProp2Img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: solid 2px red;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 2px red;
+  margin-bottom: 15px;
     
 }
 
 .valueProp2 {
-    margin-left: 60px;
-    /* float: right; */
+  margin-left: 60px;
+
 }
 
 .valueProp3Img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    border: solid 2px red;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 2px red;
+  margin-bottom: 15px;
 }
 
 .valueProp3 {
-    margin-left: 60px;
+  margin-left: 60px;
 }
-/* ------------------- PROFILE PAGE ------------------- */
 
+.valuePropTitle {
+  display: inline;
+  margin-right: 30%;
+}
+
+.testimonials{
+  margin-top: 10px;
+}
+
+.login {
+  margin-left: 5%;
+  background-color: rgba(4, 4, 129, 0.2);
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 2px red;
+  margin-bottom: 15px;
+
+}
+
+.signin {
+  margin-top: 30%;
+  margin-left: 10%;
+}
+
+/* .valueProp1Img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 2px red;
+  margin-bottom: 15px;
+} */
+
+
+
+
+
+/* ------------------- PROFILE PAGE ------------------- */
 .profField {
-    font-size: 18px;
-    font-weight: 400;
-    color: red;
-    display: inline;
+  font-size: 18px;
+  font-weight: 400;
+  color: red;
+  display: inline;
 }
 
 .profFieldVal {
-    font-size: 16px;
-    color: blue;
-    display: inline;
-    padding-left: 20px;    
+  font-size: 16px;
+  color: blue;
+  display: inline;
+  padding-left: 20px;    
 }
 
 .profPict {
-    border: red 2px solid;
+  border: red 2px solid;
     
 }
 
-.profBut {
+/* .profBut {
     
-}
+} */
 
 
 
@@ -136,35 +177,35 @@
 
 /* ------------------- EVENTS ------------------- */
 .event-header{
-    height: 350px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    display: flex;
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
 }
 
 .event-header:hover{
-    transform: translateY(0px);
-    position: relative;
-    display: flex;
+  transform: translateY(0px);
+  position: relative;
+  display: flex;
 }
 
 .buttons{
-position: absolute;
-display:none;
-right: 50px;
-bottom: 25px;
-transform: translateY(80px);
+  position: absolute;
+  display:none;
+  right: 50px;
+  bottom: 25px;
+  transform: translateY(80px);
 }
 
 .event-header:hover .buttons{
-    transform: translateY(0px);
-    display: block;
+  transform: translateY(0px);
+  display: block;
 }
 
 
 /* ----------- EVENT BROWSE PAGE ------ */
-
+<
 
 #columns {
     padding: 0 1% 30px 3%;
@@ -180,32 +221,33 @@ transform: translateY(80px);
 }
 
 .event_image{
-    height: 200px;
-    width: 100%;
-    border-radius: 10% 10% 0 0;
+  height: 200px;
+  width: 100%;
+  border-radius: 10% 10% 0 0;
 }
 
 .event_card:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
 }
 
 .event_container {
     border: 3px;
     border-color: solid black;
     text-align: center;
+  align-items: center;
     
 }
 
 /* .col-md-4{
-    height: 60%;
-    width: 20%;
+  height: 60%;
+  width: 20%;
 } */
 
 /* ------------------- ABOUT US ------------------- */
 /* Three columns side by side */
 .column {
-    float: left;
-    width: 32.3%;
+  float: left;
+  width: 32.3%;
 }   
   /* Display the columns below each other instead of side by side on small screens
   @media screen and (max-width: 650px) {
@@ -216,10 +258,10 @@ transform: translateY(80px);
   } */
   
   /* Add some shadows to create a card effect */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 150, 0.2);
-    margin-left: 40px;
-  }
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 150, 0.2);
+  margin-left: 40px;
+}
   
   /* Some left and right padding inside the container */
   .container {
@@ -268,7 +310,7 @@ transform: translateY(80px);
 
 .aboutBlurb {
   margin: 0 auto;
-}
+} 
 
 
 
