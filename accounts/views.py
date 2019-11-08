@@ -53,7 +53,8 @@ def login(req):
 
         if user is not None:
             auth.login(req, user)
-            return redirect('user')
+            
+            return redirect('event_browse')
         else:
             context = {'error':'Username or password is incorrect, please try again.'}
             return render(req, 'landing.html', context)
