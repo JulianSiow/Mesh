@@ -53,7 +53,7 @@ def login(req):
 
         if user is not None:
             auth.login(req, user)
-            return redirect('profile_page')
+            return redirect('user')
         else:
             context = {'error':'Username or password is incorrect, please try again.'}
             return render(req, 'landing.html', context)
