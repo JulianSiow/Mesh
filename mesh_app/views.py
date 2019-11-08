@@ -82,6 +82,8 @@ def profile_edit(request, pk):
         'profile_form': profile_form
     })
 
+def about_page (request):
+    return render (request, 'about.html')
 
 
 

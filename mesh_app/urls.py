@@ -10,8 +10,9 @@ urlpatterns = [
     # path('user/<int:pk>/event/edit/', views_event_edit, name='event_edit'),
     # path('event/', views.event),
     path('event/<int:pk>/', views.event_page, name='event_page'),
-    # path('user/<int:pk>/event/delete/', views_event_delete, name='event_delete')
-    # path('user/<int:pk>/event/join', views.event_join, name='event_join')
+    # path('user/<int:pk>/event/delete/', views_event_delete, name='event_delete'),
+    # path('user/<int:pk>/event/join', views.event_join, name='event_join'),
+    path('about/', views.about_page, name='about'),
 ]
 
 
