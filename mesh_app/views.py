@@ -40,11 +40,17 @@ def event_create(request, pk):
     context = {'form': form, 'header':"Add an Event!"}
     return render(request,'event_form.html', context)
 
+@login_required
 def event_join(request, event_pk, pk):
     user = User.objects.get(id=pk)
     event = Event.objects.get(id=event_pk)
-    user_join = Attendees(event=event, user=user)
-    user_join.save()
+    if Attendees.objects.filter(event=event, attendee=user).exists():
+        Attendees.objects.get(event=event, attendee=user).delete()
+    else:
+        user_join = Attendees(event=event, attendee=user)
+        user_join.save()
+    context = {"event": event}
+    return redirect('event_page', event_pk=event_pk)
 
 
 def event_browse(request):
@@ -54,7 +60,9 @@ def event_browse(request):
 
 def event_page(request, event_pk):
     event = Event.objects.get(id=event_pk)
-    context = {"event": event}
+    user = request.user
+    attending = Attendees.objects.filter(event=event, attendee=user).exists()
+    context = {"event": event, "attending":attending}
     return render(request, 'event_detail.html', context)
 
 @login_required

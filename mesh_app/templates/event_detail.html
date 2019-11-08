@@ -10,9 +10,15 @@
         <h4>
             Created by {{event.creator}}
         </h4>
+    {% if user.is_authenticated %}
         <div class="buttons">
-                <button action="POST" href="{% url 'event_join' event_pk=event.pk pk=user.pk %}">Attending</button>
+            {% if attending %}
+                <a href="{% url 'event_join' event_pk=event.pk pk=user.pk %}">Leave Event</a>
+            {% else %}
+                <a href="{% url 'event_join' event_pk=event.pk pk=user.pk %}">Join Event</a>
+            {% endif %}
         </div>
+    {% endif %}
     </section>
 </section>
 </div>
@@ -21,6 +27,7 @@
     <h4 class ="event-type"> {{event.field}}</h4>
     <p class ="event-description">
         {{event.description}}
+        {{attending}}
     </p>
 </section>
 
