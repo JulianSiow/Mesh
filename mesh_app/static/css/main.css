@@ -167,13 +167,12 @@ transform: translateY(80px);
 
 
 #columns {
-    align-items: center;
-    
+    padding: 0 1% 30px 3%;
 }
 
 .event_card {
-    height: 300px;
-    width: 85%;
+    height: 90%;
+    width: 95%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 10%;
@@ -191,11 +190,11 @@ transform: translateY(80px);
 }
 
 .event_container {
-    align-items: center;
+    border: 3px;
+    border-color: solid black;
+    text-align: center;
     
 }
-
-
 
 /* .col-md-4{
     height: 60%;
