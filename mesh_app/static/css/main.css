@@ -23,6 +23,7 @@
     margin-top: 10px;
     margin-left: 20px;
     display: inline;
+    text-decoration: none;
 }
 
 #coTagLine {
@@ -48,6 +49,35 @@
   margin-left: 20px;
 }
 
+.login {
+  margin-left: 5%;
+  background-color: #0000AA;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 2px red;
+  margin-bottom: 15px;
+}
+
+.signin {
+  margin-top: 30%;
+  margin-left: 10%;
+}
+
+
+
+
+/* ----------- Value Prop --------------- */
+.valuePropLeft {
+
+}
+
+
+
+.valuePropLeft {
+  display: flex;
+  flex: 50%;
+}
 
 /* ------- Testimonials ---------*/
 .flex-grid {
@@ -119,29 +149,7 @@
   margin-top: 10px;
 }
 
-.login {
-  margin-left: 5%;
-  background-color: rgba(4, 4, 129, 0.2);
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: solid 2px red;
-  margin-bottom: 15px;
 
-}
-
-.signin {
-  margin-top: 30%;
-  margin-left: 10%;
-}
-
-/* .valueProp1Img {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  border: solid 2px red;
-  margin-bottom: 15px;
-} */
 
 
 
@@ -252,7 +260,7 @@
   
   /* Add some shadows to create a card effect */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 150, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(20, 3, 114, 0.2);
   margin-left: 40px;
 }
   
@@ -273,19 +281,17 @@
   }
   
   .button {
-
-    border-radius: 10%;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    font-size: 22px;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 10%;
-    margin: 0 auto;
-
+  border-radius: 10%;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  font-size: 22px;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 10%;
+  margin: 0 auto;
 }
 
 .button:hover {
@@ -293,12 +299,12 @@
 }
 
 .teamPic {
-    margin: 20px;
-    width: 20% !important;
-    height: 20% !important;
-    border-radius: 10%;
-    border: solid 2px blue;
-    float: right;
+  margin: 20px;
+  width: 20% !important;
+  height: 20% !important;
+  border-radius: 10%;
+  border: solid 2px red;
+  float: right;
 }
 
 .aboutBlurb {
