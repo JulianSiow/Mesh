@@ -11,7 +11,7 @@
             Created by {{event.creator}}
         </h4>
         <div class="buttons">
-                <button type="submit">Attending</button>
+                <button action="POST" href="{% url 'event_join' event_pk=event.pk pk=user.pk %}">Attending</button>
         </div>
     </section>
 </section>
