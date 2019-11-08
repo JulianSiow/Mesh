@@ -23,7 +23,7 @@ class Profile(models.Model):
 
 
 class Event(models.Model):
-    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='creator')
+    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='events')
     title = models.CharField(max_length=100)
     date_time = models.DateTimeField()
     location = models.TextField(max_length=100)
@@ -34,13 +34,14 @@ class Event(models.Model):
     facebook = models.TextField()
     twitter = models.TextField()
     instagram = models.TextField()
+    
 
     def __str__(self):
         return f'{self.title} - {self.creator}'
 
 class Attendees(models.Model):
-    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='event')
-    attendee = models.ForeignKey(User, on_delete=models.CASCADE, related_name='attendee')
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='attendees')
+    attendee = models.ForeignKey(User, on_delete=models.CASCADE, related_name='attendees')
 
 class Friends(models.Model):
     friend1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friend2')

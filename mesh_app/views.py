@@ -3,7 +3,7 @@ from django.core import serializers
 from django.contrib.auth.decorators import login_required
 
 from .models import User, Event
-from .forms import Event
+from .forms import EventForm
 # Create your views here.
 
 def landing (request):
@@ -27,7 +27,7 @@ def profile_page(request,pk):
 
 @login_required
 def event_create(request):
-    user = User.object.get(id=pk)
+    user = User.objects.get(id=pk)
     if request.method == 'POST':
         form = Event(request.POST)
         if form.is_valid():
@@ -47,7 +47,7 @@ def event_browse(request):
 def event_page(request,pk):
     event = Event.objects.get(id=pk)
     context = {"event": event}
-    return render(request, '____', context)
+    return render(request, 'event_detail.html', context)
 
 @login_required
 def event_edit(request, pk, event_pk):

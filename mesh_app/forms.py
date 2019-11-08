@@ -1,7 +1,7 @@
 from django import forms
 from .models import User, Event, Profile
 
-class Event(forms.ModelForm):
+class EventForm(forms.ModelForm):
     class Meta:
         model = Event
         fields = ('title', 'date_time', 'location', 'capacity', 'description', 'picture', 'field', 'facebook', 'twitter', 'instagram')
