@@ -25,19 +25,20 @@ def profile_page(request,pk):
     context = {"user": user}
     return render(request,'profile.html', context)
 
-@login_required
-def event_create(request):
+# @login_required
+def event_create(request, pk):
     user = User.objects.get(id=pk)
     if request.method == 'POST':
-        form = Event(request.POST)
+        form = EventForm(request.POST)
         if form.is_valid():
             event = form.save(commit=False)
-            event.creator = user
-            return redirect('____', pk = event.pk)
-        else:
-            form = EventForm()
-        context = {'form': form, 'header':"Add an Event!"}
-        return render(request,'____', context)
+            # event.creator = user
+            event.save()
+            return redirect('event_page', pk = event.pk)
+    else:
+        form = EventForm()
+    context = {'form': form, 'header':"Add an Event!"}
+    return render(request,'event_form.html', context)
 
 def event_browse(request):
     event = Event.objects.all()
