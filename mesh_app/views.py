@@ -22,7 +22,8 @@ def profile_create(request):
 
 def profile_page(request):
     user = request.user
-    context = {"user": user}
+    my_events = Attendees.objects.filter(attendee=user)
+    context = {"user": user,"my_events": my_events}
     return render(request,'profile.html', context)
 
 @login_required
