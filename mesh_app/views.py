@@ -17,7 +17,7 @@ def profile_page(request):
 
 @login_required
 def event_create(request, pk):
-    user = User.objects.get(id=pk)
+    user = request.user
     if request.method == 'POST':
         form = EventForm(request.POST)
         if form.is_valid():
