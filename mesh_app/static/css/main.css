@@ -3,13 +3,14 @@
 
 .navbar {
     position: relative;
-    width: 99%;
+    width: 100%;
     min-height: 50px;
-    margin-bottom: 1px;
+    margin-bottom: 0px;
     margin-right: auto;
-    margin-bottom: 1px;
     margin-left: auto;
     border: 2px solid transparent;
+    border-radius: 0;
+
 }
 
 
@@ -20,7 +21,7 @@
 #coName {
     font-family: 'Orbitron', sans-serif;
     font-size: 36px;
-    margin-top: 10px;
+    margin-top: 50%;
     margin-left: 20px;
     display: inline;
     text-decoration: none;
@@ -29,16 +30,31 @@
 #coTagLine {
     display: inline;
     padding-left: 50px;
-    margin-top: 10px;
+    margin-top: 50%;
+    color: white;
 }
 
 
 /* ------------------- LANDING PAGE ------------------- */
 
 /* ----------- Carousel --------- */
-.carousel-inner {
-    margin-bottom: 15px;
+.carousel {
+    height: 10%;
 }
+.item {
+    max-height: 50%;
+    max-width: 50%
+}
+
+
+
+
+
+/* 
+.carousel-inner 
+    margin-bottom: 15px;
+    height: 50%;
+ */
 
 
 
@@ -67,17 +83,32 @@
 
 
 
+
+
+
+
+/* <*-------- Login -------> */
+.loginRight {
+  float: right;
+  border: red 3px solid;
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
 /* ----------- Value Prop --------------- */
 .valuePropLeft {
-
+  float: left;
+  border: red 3px solid;
+  width: 100px;
+  height: 100px;
 }
 
 
 
-.valuePropLeft {
-  display: flex;
-  flex: 50%;
-}
+
 
 /* ------- Testimonials ---------*/
 .flex-grid {
