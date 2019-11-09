@@ -26,7 +26,7 @@
     <h2 class = "description"> Description </h2>
     <h4 class ="event-type"> {{event.field}}</h4>
     {% if delete_available %}
-        <a href="{% url 'event_delete' %}">Delete</a>
+        <a href="{% url 'event_delete' event_pk=event.pk %}">Delete</a>
     {% endif %}
     <p class ="event-description">
         {{event.description}}
