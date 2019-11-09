@@ -56,7 +56,7 @@ def event_page(request, event_pk):
         delete_available = True
     else:
         delete_available = False
-    context = {"event": event, "attending":attending, "delete_available":delete_available}
+    context = {"event":event, "attending":attending, "delete_available":delete_available}
     return render(request, 'event_detail.html', context)
 
 @login_required
@@ -95,7 +95,7 @@ def profile_edit(request, pk):
 @login_required
 def event_delete(request, event_pk):
     user = request.user
-    event = Event.objects.get(id=event.pk)
+    event = Event.objects.get(id=event_pk)
     if event.creator == user:
         event.delete()
         return redirect('user')
