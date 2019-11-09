@@ -9,17 +9,6 @@ from .forms import EventForm
 def landing (request):
     return render (request, 'landing.html')
 
-def profile_create(request):
-    if request.method == 'POST':
-        form = ProfileForm(request.POST)
-        if form.is_valid():
-            profile = form.save()
-            return redirect('____', pk=profile.pk)
-    else:
-        form = ProfileForm()
-    context = {'form': form}
-    return render(request, '____', context)
-
 def profile_page(request):
     user = request.user
     context = {"user": user}
@@ -62,7 +51,11 @@ def event_page(request, event_pk):
     event = Event.objects.get(id=event_pk)
     user = request.user
     attending = Attendees.objects.filter(event=event, attendee=user).exists()
-    context = {"event": event, "attending":attending}
+    if user == event.creator:
+        delete_available = True
+    else:
+        delete_available = False
+    context = {"event": event, "attending":attending, "delete_available":delete_available}
     return render(request, 'event_detail.html', context)
 
 @login_required
@@ -97,6 +90,16 @@ def profile_edit(request, pk):
         'user_form': user_form,
         'profile_form': profile_form
     })
+
+@login_required
+def event_delete(request, event_pk):
+    user = request.user
+    event = Event.objects.get(id=event.pk)
+    if event.creator == user:
+        event.delete()
+        return redirect('user')
+    else:
+        return redirect('landing')
 
 def about_page (request):
     return render (request, 'about.html')
