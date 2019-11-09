@@ -11,7 +11,9 @@
         <p class="profField">Portfolio:</p><p class="profFieldVal">{{user.profile.portfolio_link}}</p><br>
         <p class="profField">LinkedIn:</p><p class="profFieldVal">{{user.profile.linkedin}}</p> <br>
         <button class="profBut" type="click">Edit</button>
-        <button class="profBut" type="reset">Cancel</button>
+        <button class="profBut" type="reset">
+            <a href="{% url 'event_create' pk=user.pk %}">New Event</a>
+        </button>
         <button class="profBut" type="click">Save</button>
     </div>
 </div>

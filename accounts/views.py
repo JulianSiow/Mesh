@@ -38,7 +38,7 @@ def register(req):
                 user.profile.linkedin = linkedin
                 user.profile.save()
 
-            return redirect('events')
+            return redirect('landing')
         else:
             context = {'error':'Passwords do not match'}
             return render(req, 'sign_up.html', context)
