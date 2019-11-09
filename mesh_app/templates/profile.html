@@ -2,26 +2,35 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="userInfo">
-
-
-Picture:
-<img class="profPict" src ="{{user.profile.prof_pic}}">
-
-
-
-<br>
-<p class="profField">First Name:</p><p class="profFieldVal">{{user.first_name}}</p><br>
-<p class="profField">Last Name:</p><p class="profFieldVal">{{user.last_name}}</p><br>
-<p class="profField">User Name:</p><p class="profFieldVal">{{user.username}}</p><br>
-<p class="profField">Field:</p><p class="profFieldVal">{{user.profile.field}}</p><br>
-<p class="profField">Portfolio:</p><p class="profFieldVal">{{user.profile.portfolio_link}}</p><br>
-<p class="profField">LinkedIn:</p><p class="profFieldVal">{{user.profile.linkedin}}</p>
+<div class="profile_card column">
+    <img class ="profile_image"src="{{user.profile.prof_pic}}">
+    <div class="profile_container">
+        <p class="profField">First Name:</p><p class="profFieldVal">{{user.first_name}}</p><br>
+        <p class="profField">Last Name:</p><p class="profFieldVal">{{user.last_name}}</p><br>
+        <p class="profField">Field:</p><p class="profFieldVal">{{user.profile.field}}</p><br>
+        <p class="profField">Portfolio:</p><p class="profFieldVal">{{user.profile.portfolio_link}}</p><br>
+        <p class="profField">LinkedIn:</p><p class="profFieldVal">{{user.profile.linkedin}}</p> <br>
+        <button class="profBut" type="click">Edit</button>
+        <button class="profBut" type="reset">Cancel</button>
+        <button class="profBut" type="click">Save</button>
+    </div>
 </div>
-<button class="profBut" type="click">Edit</button>
-<button class="profBut" type="reset">Cancel</button>
-<button class="profBut" type="click">Save</button>
+
+{% for event in event %}
+<div class="column" id ="columns">
+    <div class="event_card" >
+    <a href="{% url 'event_page' event_pk=event.pk %}">
+    <img class ="event_image"src="{{event.picture}}">
+        <div class="event_container">
+            <h4><b>{{event.title}}</b></h4>
+            <p> <b>Location</b>: {{event.location}} <br>
+            <b>When</b>: {{event.date_time}}</p>
+        </div>
+    </a>
+    </div>
+</div>
+{% endfor %}
+
 
 
 
