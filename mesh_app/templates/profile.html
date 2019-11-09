@@ -16,23 +16,19 @@
     </div>
 </div>
 
-{% for event in event %}
+{% for event in my_events %}
 <div class="column" id ="columns">
     <div class="event_card" >
-    <a href="{% url 'event_page' event_pk=event.pk %}">
-    <img class ="event_image"src="{{event.picture}}">
+    <a href="{% url 'event_page' event_pk=event.event.pk %}">
+    <img class ="event_image"src="{{event.event.picture}}">
         <div class="event_container">
-            <h4><b>{{event.title}}</b></h4>
-            <p> <b>Location</b>: {{event.location}} <br>
-            <b>When</b>: {{event.date_time}}</p>
+            <h4><b>{{event.event.title}}</b></h4>
+            <p> <b>Location</b>: {{event.event.location}} <br>
+            <b>When</b>: {{event.event.date_time}}</p>
         </div>
     </a>
     </div>
 </div>
 {% endfor %}
-
-
-
-
 
 {% endblock %}
