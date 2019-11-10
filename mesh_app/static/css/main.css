@@ -4,13 +4,15 @@
 /* ------ Top Nav ---Bootstrap Overrides------- */
 
 .navbar {
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
     min-height: 50px;
     margin-bottom: 0px;
-    margin-right: auto;
-    margin-left: auto;
-    border: 2px solid transparent;
+    /* margin-right: auto; */
+    /* margin-left: auto; */
+    /* border: 2px solid transparent; */
     border-radius: 0;
 
 }
@@ -19,12 +21,19 @@
 }
 
 /* -- Footer ---- */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding-top: .5%;
+  
+}
 
-
-
-
-
-
+ /* Company Name & Tagline */
 #coName {
   font-family: 'Orbitron', sans-serif;
   font-size: 36px;
@@ -55,15 +64,10 @@ a {
     max-width: 50%
 }
 
-
-
-
-
-/* 
-.carousel-inner 
-    margin-bottom: 15px;
+.carousel-inner {
+    margin-top: 15px;
     height: 50%;
- */
+}
 
 
 
@@ -97,24 +101,23 @@ a {
 }
 
 #intro {
-  font-size: 14px;
+  padding-top: 10px;
+  font-size: 16px;
   font-family: 'Orbitron', sans-serif;
-  margin-left: 30%;
+  margin-left: 5%;
 }
 
 
 
 
 
-/* ------- Testimonials ---------*/
+/* -------- Testimonials -------------------*/
 .testimonials {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: inline;
 }
 
 .testimonialTitle{
-  
+  color: Red;
 }
 
 /*---testimonial write ups ------*/
@@ -128,30 +131,38 @@ a {
   font-size: 16px;
 }
 
-/*-------layout-------*/
+/*------------------Layout-----------------*/
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
 
-/* - Testimonial Modules ----*/
+/* - Testimonial Module 1 ----*/
 .testimonial1 {
-  width: 33.3%;
-
+  
 }
 
-.testimonial2 {
-  width: 33.3%;
-}
-
-.testimonial3 {
-  width: 33.3%;
-}
-
-/*-------Testimonial Images--------*/
 .testimonial1Img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
   border: solid 1px #000000;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  padding-left: 50px;
+}
+
+/* - Testimonial Module 2 ----*/
+.testimonial2 {
 }
 
 .testimonial2Img {
@@ -159,8 +170,13 @@ a {
   height: 300px;
   border-radius: 50%;
   border: solid 1px #000000;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  padding-left: 50px;
     
+}
+
+/* - Testimonial Module 3 ----*/
+.testimonial3 {
 }
 
 .testimonial3Img {
@@ -168,8 +184,18 @@ a {
   height: 300px;
   border-radius: 50%;
   border: solid 1px #000000;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+  padding-left: 50px;
 }
+
+.testimonialBlurb {
+  margin-bottom: 10%;
+}
+
+
+
+
+
 
 /* ------------------- PROFILE PAGE ------------------- */
 
