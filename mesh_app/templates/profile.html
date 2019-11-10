@@ -3,6 +3,7 @@
 {% block content %}
 
 <div class="profile_card column">
+    <div class = "profile_border">
     <img class ="profile_image"src="{{user.profile.prof_pic}}">
     <div class="profile_container">
         <p class="profField">First Name:</p><p class="profFieldVal">{{user.first_name}}</p><br>
@@ -16,10 +17,12 @@
         <button class="profBut" type="reset">
             <a href="{% url 'event_create' pk=user.pk %}">New Event</a>
         </button>
-        <button class="profBut" type="click">Save</button>
+    </div>
     </div>
 </div>
 
+<section>
+    <h2 class ="attending_header"> Events You're Attending! </h2>
 {% for event in my_events %}
 <div class="column" id ="columns">
     <div class="event_card" >
@@ -33,6 +36,8 @@
     </a>
     </div>
 </div>
+</section>
+
 {% endfor %}
 
 {% endblock %}

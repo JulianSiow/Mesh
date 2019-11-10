@@ -177,11 +177,16 @@ a {
   height: 500px;
   width: 350px;
   text-align: left;
+  padding: 1%;
+}
+
+.profile_border{
+  border: 2px solid black;
 }
 
 .profile_image{
   height: 60%;
-  width:100%;
+  width: 100%;
 }
 
 .profile_container{
@@ -205,16 +210,29 @@ a {
     
 }
 
-
+.attending_header{
+  text-align: center;
+}
 
 
 /* ------------------- EVENTS ------------------- */
 .event-header{
-  height: 350px;
+  height: 425px;
+  width:100%;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
   display: flex;
+}
+
+.event-info{
+  padding: 10px;
+}
+
+.event_dt{
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .event-header:hover{
@@ -273,7 +291,7 @@ a {
 /* Three columns side by side */
 .column {
   float: left;
-  width: 32.3%;
+  width: 33%;
 }   
 
 /* Add some shadows to create a card effect */
