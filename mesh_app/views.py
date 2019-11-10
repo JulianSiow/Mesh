@@ -3,12 +3,13 @@ from django.core import serializers
 from django.contrib.auth.decorators import login_required
 
 from .models import User, Event, Attendees
-from .forms import EventForm
+from .forms import EventForm, UserForm, ProfileForm
 # Create your views here.
 
 def landing (request):
     return render (request, 'landing.html')
 
+@login_required
 def profile_page(request):
     user = request.user
     my_events = Attendees.objects.filter(attendee=user)
@@ -42,7 +43,6 @@ def event_join(request, event_pk, pk):
     context = {"event": event}
     return redirect('event_page', event_pk=event_pk)
 
-
 def event_browse(request):
     event = Event.objects.all()
     context = {"event": event}
@@ -61,12 +61,12 @@ def event_page(request, event_pk):
 
 @login_required
 def event_edit(request, pk, event_pk):
-    event = Event.objects.get(id=pk)
+    event = Event.objects.get(id=event_pk)
     if request.method == 'POST':
-        form = Event(request.POST, instance= event)
+        form = Event(request.POST, instance=event)
         if form.is_valid():
             event = form.save()
-            return redirect('____', pk= event.pk)
+            return redirect('____', pk=event.pk)
     else:
         form = Event()
     context = {'form': form,'header': "Edit this event"}
@@ -79,15 +79,15 @@ def profile_edit(request, pk):
         user_form = UserForm(request.POST, instance = request.user)
         profile_form = ProfileForm(request.POST, instance = request.user.profile)
         if user_form.is_valid() and profile_form.is_valid():
-            user_form.save()
-            profile_form.save()
-            return redirect('___')
+            user = user_form.save()
+            user.profile = profile_form.save()
+            return redirect('user')
         else:
             messages.error(request,_('Please correct the fields and submit again.'))
     else:
         user_form = UserForm(instance = request.user)
-        profile_form = ProfileForm(instace = request.user.profile)
-    return render(request, '____',{
+        profile_form = ProfileForm(instance = request.user.profile)
+    return render(request, 'profile_form.html',{
         'user_form': user_form,
         'profile_form': profile_form
     })
