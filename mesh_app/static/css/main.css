@@ -284,11 +284,11 @@ a {
 /* ----------- EVENT BROWSE PAGE ------ */
 
 #columns {
-    padding: 0 1% 30px 3%;
+    padding: 0 1% 15px 3%;
 }
 
 .event_card {
-    height: 90%;
+    height: 100%;
     width: 95%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
