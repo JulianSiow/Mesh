@@ -14,6 +14,9 @@
     border-radius: 0;
 
 }
+.navbar-header {
+  margin-top: .5%;
+}
 
 /* -- Footer ---- */
 
@@ -23,21 +26,23 @@
 
 
 #coName {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 36px;
-    margin-top: 50%;
-    margin-left: 20px;
-    display: inline;
-    text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  margin-top: 50%;
+  margin-left: 25px;
+  display: inline;
+    
 }
 
 #coTagLine {
-    display: inline;
-    padding-left: 50px;
-    margin-top: 50%;
-    color: white;
+  display: inline;
+  padding-left: 50px;
+  margin-top: 50%;
+  color: white;
 }
-
+a {
+  text-decoration: none;
+}
 
 /* ------------------- LANDING PAGE ------------------- */
 
@@ -67,7 +72,7 @@
 
 .loginModule {
   float: right;
-  border: red 3px solid;
+  border: red 2px solid;
   width: 30%;
   height: 200px;
 }
@@ -77,16 +82,24 @@
   margin-left: 5%;
 }
 
-
+.btn {
+  background-color: rgba(103, 190, 103, 0.5);
+}
 
 
 
 /* ----------- Value Prop --------------- */
 .valueProp {
   float: left;
-  border: red 3px solid;
+  border: red 2px solid;
   width: 70%;
   height: 200px;
+}
+
+#intro {
+  font-size: 14px;
+  font-family: 'Orbitron', sans-serif;
+  margin-left: 30%;
 }
 
 
@@ -94,85 +107,69 @@
 
 
 /* ------- Testimonials ---------*/
-.testimonials{
-  margin-top: 10px;
-}
-
-.flex-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-
-.col {
-    flex: 1;
-  }
-
-.flex-grid-thirds {
+.testimonials {
   display: flex;
   justify-content: space-between;
-  }
-
-.flex-grid-thirds .col {
-  width: 30%;
+  flex-wrap: wrap;
 }
 
-/* .valuePropTitle {
-  margin-left: 45%;
-} */
-
-.valuePropTitle {
-  display: inline;
-  margin-right: 30%;
+.testimonialTitle{
+  
 }
 
+/*---testimonial write ups ------*/
+.testimonialBlurb {
+  max-width: 300px;
+  text-align: center;
+}
 
+.tName {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/*-------layout-------*/
+
+
+/* - Testimonial Modules ----*/
+.testimonial1 {
+  width: 33.3%;
+
+}
+
+.testimonial2 {
+  width: 33.3%;
+}
+
+.testimonial3 {
+  width: 33.3%;
+}
+
+/*-------Testimonial Images--------*/
 .testimonial1Img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: solid 2px red;
+  border: solid 1px #000000;
   margin-bottom: 15px;
 }
-
-/* .valueProp1 {
-  margin-left: 60px; 
-
-}*/
 
 .testimonial2Img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: solid 2px red;
+  border: solid 1px #000000;
   margin-bottom: 15px;
     
 }
-
-/* .valueProp2 {
-  margin-left: 60px; 
-
-}*/
 
 .testimonial3Img {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  border: solid 2px red;
+  border: solid 1px #000000;
   margin-bottom: 15px;
 }
-
-/* .valueProp3 {
-  margin-left: 60px;
-} */
-
-
-
-
-
-
-
 
 /* ------------------- PROFILE PAGE ------------------- */
 
@@ -303,6 +300,10 @@
   
 .title {
   color: grey;
+}
+
+.team {
+  height: 300px;
 }
 
 .teamPic {
