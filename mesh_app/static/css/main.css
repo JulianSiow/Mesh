@@ -49,12 +49,12 @@
   margin-top: 50%;
   color: white;
 }
+
 a {
   text-decoration: none;
 }
 
 /* ------------------- LANDING PAGE ------------------- */
-
 /* ----------- Carousel --------- */
 .carousel {
     height: 10%;
@@ -76,9 +76,9 @@ a {
 
 .loginModule {
   float: right;
-  border: red 2px solid;
-  width: 30%;
-  height: 200px;
+  border: black 1px solid;
+  width: 40%;
+  height: 300px;
 }
 
 .signinForm {
@@ -95,9 +95,9 @@ a {
 /* ----------- Value Prop --------------- */
 .valueProp {
   float: left;
-  border: red 2px solid;
-  width: 70%;
-  height: 200px;
+  border: black 1px solid;
+  width: 60%;
+  height: 300px;
 }
 
 #intro {
@@ -133,23 +133,25 @@ a {
 
 /*------------------Layout-----------------*/
 .column {
-  float: left;
+  float: center;
   width: 33.33%;
   padding: 10px;
-  height: 300px; 
+  height: 500px;
+  text-align: center; 
+  border: 1px black solid;
 }
 
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
-}
+} */
 
 
 /* - Testimonial Module 1 ----*/
 .testimonial1 {
-  
+  background-color: #aaa;
 }
 
 .testimonial1Img {
@@ -158,11 +160,12 @@ a {
   border-radius: 50%;
   border: solid 1px #000000;
   margin-bottom: 30px;
-  padding-left: 50px;
+  /* padding-left: 50px; */
 }
 
 /* - Testimonial Module 2 ----*/
 .testimonial2 {
+  background-color: #bbb;
 }
 
 .testimonial2Img {
@@ -171,12 +174,13 @@ a {
   border-radius: 50%;
   border: solid 1px #000000;
   margin-bottom: 30px;
-  padding-left: 50px;
+  /* padding-left: 50px; */
     
 }
 
 /* - Testimonial Module 3 ----*/
 .testimonial3 {
+  background-color: #aaa;
 }
 
 .testimonial3Img {
@@ -185,11 +189,12 @@ a {
   border-radius: 50%;
   border: solid 1px #000000;
   margin-bottom: 30px;
-  padding-left: 50px;
+  /* padding-left: 50px; */
 }
 
 .testimonialBlurb {
   margin-bottom: 10%;
+  align-content: center;
 }
 
 
@@ -310,7 +315,6 @@ a {
     border: 3px;
     border-color: solid black;
     text-align: center;
-    
 }
 
 /* ------------------- ABOUT US ------------------- */
@@ -324,10 +328,8 @@ a {
 .card {
   box-shadow: 0 4px 8px 0 rgba(20, 3, 114, 0.2);
   margin-left: 40px;
-  padding: 10px;
-  background-color: rgba(255,255,255,0.2);
-
-
+  padding: 20px;
+  background-color: rgba(255,255,255,0.1);
 }
   
 /* Some left and right padding inside the container */
@@ -347,25 +349,27 @@ a {
 }
 
 .team {
-  height: 300px;
+  height: 220px;
 }
 
 .teamPic {
   margin: 20px;
   width: 20% !important;
-  height: 20% !important;
-  border-radius: 10%;
-  border: solid 2px red;
+  height: 90% !important; 
+  border-radius: 20%;
+  border: solid 2px grey;
   float: right;
 }
 
 .aboutBlurb {
   margin: 0 auto;
+  padding: 10px;
   font-size: 20px;
 } 
 
-
-
+h2 {
+  color: #337AB7;
+}
 
 
 
