@@ -60,19 +60,6 @@ def event_page(request, event_pk):
     return render(request, 'event_detail.html', context)
 
 @login_required
-def event_edit(request, pk, event_pk):
-    event = Event.objects.get(id=event_pk)
-    if request.method == 'POST':
-        form = Event(request.POST, instance=event)
-        if form.is_valid():
-            event = form.save()
-            return redirect('____', pk=event.pk)
-    else:
-        form = Event()
-    context = {'form': form,'header': "Edit this event"}
-    return render(request, '_____', context)
-
-@login_required
 def profile_edit(request, pk):
     user = User.objects.get(id=pk)
     if request.method == 'POST':
@@ -91,6 +78,20 @@ def profile_edit(request, pk):
         'user_form': user_form,
         'profile_form': profile_form
     })
+
+@login_required
+def event_edit(request, event_pk):
+    user = request.user
+    event = Event.objects.get(id=event_pk)
+    if request.method == 'POST':
+        form = EventForm(request.POST, instance = event)
+        if form.is_valid():
+            event = form.save()
+            return redirect('event_page', event_pk=event.pk)
+    else:
+        form = EventForm(instance = event)
+    context = {'form':form, 'event':event, 'header':"Edit this event"}
+    return render(request, 'event_form.html', context)
 
 @login_required
 def event_delete(request, event_pk):
