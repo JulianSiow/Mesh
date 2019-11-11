@@ -371,8 +371,10 @@ h2 {
   color: #337AB7;
 }
 
+/* --------------------------Form Styling------------------------- */
 
-
-
+.full-page-form{
+  padding: 20px 40px 60px 40px;
+}
 
 

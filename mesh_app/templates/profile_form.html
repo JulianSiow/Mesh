@@ -4,14 +4,14 @@
 
 {% block content %}
 
-<section>
+<section class="full-page-form">
     <h2>Edit your account</h2>
     <form method="POST">
         {% csrf_token %}
         {{user_form|crispy}}
         {{profile_form|crispy}}
-        <button type="submit">Save</button>
-        <button>
+        <button class="btn" type="submit">Save</button>
+        <button class="btn">
             <a href="{% url 'user' %}">Cancel</a>
         </button>
     </form>
