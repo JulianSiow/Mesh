@@ -84,6 +84,7 @@ a {
 .signinForm {
   margin-top: 5%;
   margin-left: 5%;
+  padding-right: 5%;
 }
 
 .btn {
@@ -375,6 +376,8 @@ h2 {
 
 .full-page-form{
   padding: 20px 40px 60px 40px;
+  max-width: 1000px;
+  
 }
 
 
