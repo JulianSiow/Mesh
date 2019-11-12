@@ -2,6 +2,7 @@
 /* -------------------GLOBAL ITEMS -------------------- */
 
 /* ------ Top Nav ---Bootstrap Overrides------- */
+
 .navbar {
     position: fixed;
     left: 0;
@@ -13,15 +14,13 @@
     /* margin-left: auto; */
     /* border: 2px solid transparent; */
     border-radius: 0;
-    z-index: 100; 
-    /*^^^ Thanks Diego! https://stackoverflow.com/questions/34521587/slick-slider-js-fixed-header-overlap-issue-only-in-chrome */
-}
 
+}
 .navbar-header {
   margin-top: .5%;
 }
 
-/* ----------- Footer ------------ */
+/* -- Footer ---- */
 .footer {
   position: fixed;
   left: 0;
@@ -31,11 +30,10 @@
   color: white;
   text-align: center;
   padding-top: .5%;
-  z-index: 100; 
   
 }
 
- /* -------Company Name & Tagline---------- */
+ /* Company Name & Tagline */
 #coName {
   font-family: 'Orbitron', sans-serif;
   font-size: 36px;
@@ -61,11 +59,10 @@ a {
 .carousel {
     height: 10%;
 }
-
-/* .item {
+.item {
     max-height: 50%;
     max-width: 50%
-} */
+}
 
 .carousel-inner {
     margin-top: 15px;
@@ -79,7 +76,7 @@ a {
 
 .loginModule {
   float: right;
-  border: black .5px solid;
+  border: black 1px solid;
   width: 40%;
   height: 300px;
 }
@@ -93,10 +90,12 @@ a {
   background-color: rgba(103, 190, 103, 0.5);
 }
 
+
+
 /* ----------- Value Prop --------------- */
 .valueProp {
   float: left;
-  border: black .5px solid;
+  border: black 1px solid;
   width: 60%;
   height: 300px;
 }
@@ -107,6 +106,10 @@ a {
   font-family: 'Orbitron', sans-serif;
   margin-left: 5%;
 }
+
+
+
+
 
 /* -------- Testimonials -------------------*/
 .testimonials {
@@ -131,12 +134,20 @@ a {
 /*------------------Layout-----------------*/
 
 
+/* Clear floats after the columns */
+/* .row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
 .testimony{
   padding: 10px;
   height: 500px;
   text-align: center; 
   border: 1px black solid;
 }
+
 
 /* - Testimonial Module 1 ----*/
 .testimonial1 {
@@ -186,14 +197,23 @@ a {
   align-content: center;
 }
 
-/* ------------------- PROFILE PAGE ------------------- */
 
+
+
+
+
+/* ------------------- PROFILE PAGE ------------------- */
+.event_title{
+  font-size: 15px;
+}
 .column {
   float: left;
   width: 33%;
 }
+
 .profile_card{
   height: 500px;
+  min-height:800px;
   width: 350px;
   text-align: left;
   padding: 1%;
@@ -224,6 +244,7 @@ a {
 
 .profPict {
   border: red 2px solid;
+    
 }
 
 .attending_header{
@@ -282,17 +303,18 @@ a {
 /* ----------- EVENT BROWSE PAGE ------ */
 
 #columns {
-    padding: 0 1% 15px 3%;
+    padding: 0 2% 15px 2%;
 }
 
 .event_card {
     height: 100%;
+    max-height: 306px;
     width: 95%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     border-radius: 10%;
     padding: 0 0 10px 0;
-    border: .5px black solid;
+    border: 1px black solid;
 }
 
 .event_image{
@@ -310,6 +332,8 @@ a {
     border: 3px;
     border-color: solid black;
     text-align: center;
+    height:100%;
+    width:100%;
 }
 
 /* ------------------- ABOUT US ------------------- */
@@ -369,7 +393,3 @@ h2 {
 }
 
 
-/* ------------------------------------- Sign Up Page ------------------------------- */
-.signupPage {
-  background-color: rgba(103, 190, 103, 0.5)
-}
