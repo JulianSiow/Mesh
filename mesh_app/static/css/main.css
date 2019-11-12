@@ -66,6 +66,7 @@ a {
 
 .carousel-inner {
   align-content: center;
+  background-position:center bottom;
 }
 
 
@@ -245,6 +246,7 @@ a {
   color:#337ab7;
   display: inline;
   padding-left: 20px;
+  word-wrap: break-word;
 }
 
 .profPict {
