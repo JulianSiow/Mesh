@@ -281,8 +281,22 @@ a {
   flex-shrink:0;
 }
 
-.event_details{
-  color:#337AB7
+.event_title {
+  background-color: #337AB7;
+  color: whitesmoke;
+  font-size: 22px;
+  padding-top: 10px;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
+.event_details {
+  color: whitesmoke;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  background-color: #337AB7;
 }
 
 .event-info{
@@ -297,10 +311,12 @@ a {
 .event-type{
   font-size: 20px;
   margin: 0;
+  padding-left: 10px;
 }
 
 .event-description{
   padding-bottom: 1%;
+  padding-left: 10px;
 }
 
 .event_dt{
