@@ -35,9 +35,11 @@
     </p>
     {% if delete_available %}
         <a href="{% url 'event_edit' event_pk=event.pk %}">
-            <button>Edit</button>
+            <button class="btn">Edit</button>
         </a>
-        <a href="{% url 'event_delete' event_pk=event.pk %}">Delete</a>
+        <a href="{% url 'event_delete' event_pk=event.pk %}">
+            <button class="btn">Delete</button>
+        </a>
     {% endif %}
 </section>
 

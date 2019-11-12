@@ -1,5 +1,5 @@
 *About:
-A sight to bring job seekers and industry folks trying to fill positions together in a casual environment without all the stress.
+Mesh is a site to bring job seekers and industry folks trying to fill positions together in a casual environment without all the stress.
 
 
 *The Team:
@@ -31,5 +31,6 @@ Hermin Lalefar - Frontend Engineer
 -Python
 -Boostrap
 -jQuery
+-Crispy Forms
 
 
