@@ -6,11 +6,11 @@
         <h2>
             {{event.title}}
         </h2>
-        <h4>
+        <h4 class ="event_details">
             Created by {{event.creator}}
         </h4>
         <div class =" event_dt">
-        <p>{{event.location}}, {{event.date_time}}
+        <p class ="event_details">{{event.location}}, {{event.date_time}}
         </p>
         </div>
     {% if user.is_authenticated %}
@@ -29,9 +29,8 @@
     </section>
 </section>
 <section class = "event-info">
-    <h2 class = "description"> Description </h2>
-    <h4 class ="event-type"> {{event.field}}</h4>
-    <p class ="event-description">
+    <h4 class ="event-type">Type of Event: {{event.field}}</h4>
+    <p class ="event-description"> Event Description: <br>
         {{event.description}}
     </p>
     {% if delete_available %}

@@ -12,10 +12,10 @@
         <p class="profField">Portfolio:</p><p class="profFieldVal">{{user.profile.portfolio_link}}</p><br>
         <p class="profField">LinkedIn:</p><p class="profFieldVal">{{user.profile.linkedin}}</p> <br>
         <a href="{% url 'profile_edit' pk=user.pk %}">
-            <button class="btn">Edit Profile</button>
+            <button class="btn btn-secondary">Edit Profile</button>
         </a>
         <a href="{% url 'event_create' pk=user.pk %}">
-            <button class="btn">Create Event</button>
+            <button class="btn btn-secondary">Create Event</button>
         </a>
     </div>
     </div>
