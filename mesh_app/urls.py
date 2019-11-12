@@ -7,7 +7,6 @@ urlpatterns = [
     path('user/<int:pk>/edit/', views.profile_edit, name='profile_edit'),
     #path('user/<int:pk>/delete/', views.user_delete, name='user_delete'),
     path('user/<int:pk>/event/new/', views.event_create, name='event_create'),
-    # path('user/<int:pk>/event/delete/', views_event_delete, name='event_delete'),
     path('events/', views.event_browse, name='event_browse'),
     path('events/<int:event_pk>/', views.event_page, name='event_page'),
     path('events/<int:event_pk>/join/<int:pk>/', views.event_join, name='event_join'),
