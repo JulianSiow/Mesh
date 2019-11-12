@@ -2,8 +2,8 @@
 /* -------------------GLOBAL ITEMS -------------------- */
 body{
   margin-bottom: 40px;
+  background-image: url(https://previews.123rf.com/images/weedezign/weedezign1710/weedezign171000215/88341428-grey-color-mesh-fabric-textile-texture-background-lattice-sport-wear-textured-.jpg)
 }
-
 /* ------ Top Nav ---Bootstrap Overrides------- */
 
 .navbar {
@@ -290,7 +290,8 @@ a {
 
 .event-info{
   padding: 5px, 10px, 8%, 2%;
-}
+  padding-left: 1%;
+} 
 
 .event_dt{
   position: absolute;
