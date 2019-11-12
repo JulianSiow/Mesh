@@ -45,9 +45,7 @@
     </a>
   </div>
 
-  {% if error %}
-  <p>{{error}}</p>
-{% endif %}
+
 
 <div class="errorHandling">
   
@@ -64,6 +62,9 @@
 
 <!-------- Login ------->
 <div class="loginModule">
+    {% if error %}
+  <p class="errorHandling">{{error}}</p>
+{% endif %}
     <div class="col">
         <div class="bg-img">
           <form class="signinForm" action="{% url 'login' %}" method="POST">
