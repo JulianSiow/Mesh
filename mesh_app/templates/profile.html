@@ -9,8 +9,8 @@
         <p class="profField">First Name:</p><p class="profFieldVal">{{user.first_name}}</p><br>
         <p class="profField">Last Name:</p><p class="profFieldVal">{{user.last_name}}</p><br>
         <p class="profField">Field:</p><p class="profFieldVal">{{user.profile.field}}</p><br>
-        <p class="profField">Portfolio:</p><p class="profFieldVal">{{user.profile.portfolio_link}}</p><br>
-        <p class="profField">LinkedIn:</p><p class="profFieldVal">{{user.profile.linkedin}}</p> <br>
+        <p class="profField">Portfolio:</p><a class="profFieldVal" href="{{user.profile.portfolio_link}}">{{user.profile.portfolio_link}}</a><br>
+        <p class="profField">LinkedIn:</p><a class="profFieldVal" href="{{user.profile.linkedin}}">{{user.profile.linkedin}} </a> <br>
         <a href="{% url 'profile_edit' pk=user.pk %}">
             <button class="btn btn-secondary">Edit Profile</button>
         </a>
