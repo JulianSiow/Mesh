@@ -29,7 +29,7 @@
     <a href="{% url 'event_page' event_pk=event.event.pk %}">
     <img class ="event_image"src="{{event.event.picture}}">
         <div class="event_container">
-            <h4><b>{{event.event.title}}</b></h4>
+            <h4 class = "event_title"><b>{{event.event.title}}</b></h4>
             <p> <b>Location</b>: {{event.event.location}} <br>
             <b>When</b>: {{event.event.date_time}}</p>
         </div>
