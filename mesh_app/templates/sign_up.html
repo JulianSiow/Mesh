@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<section>
+<section class="signupPage">
     <form action="{% url 'register' %}" method="POST">
         {% csrf_token %}
         <p>
