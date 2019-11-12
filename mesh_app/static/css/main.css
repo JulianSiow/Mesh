@@ -2,7 +2,6 @@
 /* -------------------GLOBAL ITEMS -------------------- */
 
 /* ------ Top Nav ---Bootstrap Overrides------- */
-
 .navbar {
     position: fixed;
     left: 0;
@@ -14,13 +13,15 @@
     /* margin-left: auto; */
     /* border: 2px solid transparent; */
     border-radius: 0;
-
+    z-index: 100; 
+    /*^^^ Thanks Diego! https://stackoverflow.com/questions/34521587/slick-slider-js-fixed-header-overlap-issue-only-in-chrome */
 }
+
 .navbar-header {
   margin-top: .5%;
 }
 
-/* -- Footer ---- */
+/* ----------- Footer ------------ */
 .footer {
   position: fixed;
   left: 0;
@@ -30,10 +31,11 @@
   color: white;
   text-align: center;
   padding-top: .5%;
+  z-index: 100; 
   
 }
 
- /* Company Name & Tagline */
+ /* -------Company Name & Tagline---------- */
 #coName {
   font-family: 'Orbitron', sans-serif;
   font-size: 36px;
@@ -59,10 +61,11 @@ a {
 .carousel {
     height: 10%;
 }
-.item {
+
+/* .item {
     max-height: 50%;
     max-width: 50%
-}
+} */
 
 .carousel-inner {
     margin-top: 15px;
@@ -76,7 +79,7 @@ a {
 
 .loginModule {
   float: right;
-  border: black 1px solid;
+  border: black .5px solid;
   width: 40%;
   height: 300px;
 }
@@ -90,12 +93,10 @@ a {
   background-color: rgba(103, 190, 103, 0.5);
 }
 
-
-
 /* ----------- Value Prop --------------- */
 .valueProp {
   float: left;
-  border: black 1px solid;
+  border: black .5px solid;
   width: 60%;
   height: 300px;
 }
@@ -106,10 +107,6 @@ a {
   font-family: 'Orbitron', sans-serif;
   margin-left: 5%;
 }
-
-
-
-
 
 /* -------- Testimonials -------------------*/
 .testimonials {
@@ -134,20 +131,12 @@ a {
 /*------------------Layout-----------------*/
 
 
-/* Clear floats after the columns */
-/* .row:after {
-  content: "";
-  display: table;
-  clear: both;
-} */
-
 .testimony{
   padding: 10px;
   height: 500px;
   text-align: center; 
   border: 1px black solid;
 }
-
 
 /* - Testimonial Module 1 ----*/
 .testimonial1 {
@@ -197,11 +186,6 @@ a {
   align-content: center;
 }
 
-
-
-
-
-
 /* ------------------- PROFILE PAGE ------------------- */
 
 .column {
@@ -224,8 +208,6 @@ a {
   width: 100%;
 }
 
-.profile_container{
-}
 .profField {
   font-size: 18px;
   font-weight: 400;
@@ -242,7 +224,6 @@ a {
 
 .profPict {
   border: red 2px solid;
-    
 }
 
 .attending_header{
@@ -388,3 +369,7 @@ h2 {
 }
 
 
+/* ------------------------------------- Sign Up Page ------------------------------- */
+.signupPage {
+  background-color: rgba(103, 190, 103, 0.5)
+}

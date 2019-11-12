@@ -4,6 +4,7 @@
 {% block content %}
 
 <section class="full-page-form">
+
     <form action="{% url 'register' %}" method="POST">
         {% csrf_token %}
         <p class="form-group">
