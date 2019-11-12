@@ -20,7 +20,7 @@ body{
   z-index: 20;
 }
 .navbar-header {
-  margin-top: .5%;
+  margin-top: 9px;
 }
 
 /* -- Footer ---- */
@@ -47,7 +47,7 @@ body{
   font-family: 'Orbitron', sans-serif;
   font-size: 36px;
   color: #337ab7;
-  margin-top: 50%;
+  /* margin-top: 50%; */
   margin-left: 25px;
   display: inline; 
 }
@@ -55,38 +55,32 @@ body{
 #coTagLine {
   display: inline;
   padding-left: 50px;
-  margin-top: 50%;
+  vertical-align: center;
   color: white;
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* ------------------- LANDING PAGE ------------------- */
 /* ----------- Carousel --------- */
 
-.carousel-inner {
-  /* margin-top: 15px; */
-  /* height: 10%; */
-  align-content: center;
+.carousel-inner > .item > img { 
+   margin: 0 auto;
 }
-
-
-/* .caroImage1 {
-  padding-left: 100px; */
+ /* ^^^https://stackoverflow.com/questions/10591422/bootstrap-carousel-image-doesnt-align-properly thanks atrepp! */
 
 .column {
   float: left;
   width: 33%;
 }
 
-
 /* ----------- Login Form --------- */
 
 .errorHandling {
   height: 50px;
-  border: red solid 3px;
+  /* border: red solid 3px; */
   text-align: right;
 }
 
@@ -107,9 +101,8 @@ a {
 
 .btn {
   background-color: rgba(103, 190, 103, 0.5);
+  margin-bottom: 10px;
 }
-
-
 
 /* ----------- Value Prop --------------- */
 .valueProp {
@@ -127,10 +120,6 @@ a {
   margin-left: 5%;
 }
 
-
-
-
-
 /* -------- Testimonials -------------------*/
 /* .testimonials {
   display: inline;
@@ -140,7 +129,7 @@ a {
   color: Red;
 } */
 
-/*---testimonial write ups ------*/
+/*---Testimonial Write Ups ------*/
 .tName {
   font-weight: 700;
   font-size: 16px;
@@ -152,7 +141,6 @@ a {
   height: 550px;
   text-align: center; 
   /* border: 1px black solid; */
-
 }
 
 .testimonialBlurb {
@@ -213,12 +201,6 @@ a {
 }
 
 
-
-
-
-
-
-
 /* ------------------- PROFILE PAGE ------------------- */
 .event_sm_details{
   font-size: 12px;
@@ -229,7 +211,6 @@ a {
   margin-bottom:0;
   min-height: 40px;
 }
-
 
 .profile_card{
   height: 500px;
@@ -248,10 +229,12 @@ a {
   height: 70%;
   width: 100%;
 }
+
 .profile_container{
   background-color: #f8f9fa;
   padding-left: 2%;
 }
+
 .profField {
   font-size: 18px;
   font-weight: 400;
@@ -293,7 +276,6 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 
 .event-header img{
   min-width: 100%;
@@ -355,20 +337,20 @@ a {
   text-align: center;
 }
 #columns {
-    padding: 0 2% 40px 2%;
-    padding-left: 5%;
+  padding: 0 2% 40px 2%;
+  padding-left: 5%;
 }
 
 .event_card {
-    height: 100%;
-    max-height: 310px;
-    width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 10%;
-    padding: 0 0 10px 0;
-    border: 1px black solid;
-    background-color:#f8f9fa;
+  height: 100%;
+  max-height: 310px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10%;
+  padding: 0 0 10px 0;
+  border: 1px black solid;
+  background-color:#f8f9fa;
 }
 
 .event_image{
@@ -383,11 +365,11 @@ a {
 }
 
 .event_container {
-    border: 3px;
-    border-color: solid black;
-    text-align: center;
-    height:100%;
-    width:100%;
+  border: 3px;
+  border-color: solid black;
+  text-align: center;
+  height:100%;
+  width:100%;
 }
 
 /* ------------------- ABOUT US ------------------- */
