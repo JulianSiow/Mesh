@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div class="profile_card column">
+<div class="profile_card col-md-4">
     <div class = "profile_border">
     <img class ="profile_image"src="{{user.profile.prof_pic}}">
     <div class="profile_container">
@@ -22,9 +22,9 @@
 </div>
 
 <section>
-    <h2 class ="attending_header"> Events You're Attending! </h2>
+    <h2 class ="attending_header"> <b>Events You're Attending!</b> </h2>
 {% for event in my_events %}
-<div class="column" id ="columns">
+<div class="col-md-4" id ="columns">
     <div class="event_card" >
     <a href="{% url 'event_page' event_pk=event.event.pk %}">
     <img class ="event_image"src="{{event.event.picture}}">
