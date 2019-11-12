@@ -230,6 +230,7 @@ a {
 
 .profile_border{
   border: 2px solid black;
+  border-width: thin;
 }
 
 .profile_image{
@@ -238,6 +239,7 @@ a {
 }
 .profile_container{
   background-color: #f8f9fa;
+  padding-left: 2%;
 }
 .profField {
   font-size: 18px;
