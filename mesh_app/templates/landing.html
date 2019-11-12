@@ -16,26 +16,26 @@
 <!-- Wrapper for slides -->
 <div class="carousel-inner" role="listbox">
   <div class="item active">
-    <img class="d-block caroImage1 w-100" src= "{% static 'images/brooke-cagle-copy.jpg' %}" alt=""/>
+    <img class="d-block caroImage1" src= "{% static 'images/brooke-cagle-copy.jpg' %}" alt=""/>
     <div class="carousel-caption">
       <h3>Meet up for meals and shop talk. Enjoy a meal while making new contacts</h3>
     </div>
   </div>
   <div class="item">
-    <img class="d-block caroImage2 w-100" src= "{% static 'images/helena-lopes-copy.jpg' %}" alt=""/>
+    <img class="d-block caroImage2" src= "{% static 'images/helena-lopes-copy.jpg' %}" alt=""/>
     <div class="carousel-caption">
       <h3>Meet up with some like minded engineers and pair program over a coffee.</h3>
     </div>
   </div>
   <div class="item">
     <!-- <img class="caroImage3" src="https://images.unsplash.com/photo-1531537571171-a707bf2683da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80" alt="..."> -->
-    <img class="d-block caroImage3 w-100" src= "{% static 'images/priscilla-du-preez-copy.jpg' %}" alt=""/>
+    <img class="d-block caroImage3" src= "{% static 'images/priscilla-du-preez-copy.jpg' %}" alt=""/>
     <div class="carousel-caption">
       <h3>Meet up with someone to bounce around ideas with.</h3>
     </div>
   </div>
   <div class="item">
-    <img class="d-block caroImage4 w-100" src="https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3036&q=80" alt="...">
+    <!-- <img class="d-block caroImage4" src="https://images.unsplash.com/photo-1532635241-17e820acc59f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3036&q=80" alt="..."> -->
     <div class="carousel-caption">
       <h3>Socialize & make new connections.</h3>
     </div>
@@ -56,6 +56,9 @@
   <p>{{error}}</p>
 {% endif %}
 
+<div class="errorHandling">
+  
+</div>
 <!-------- Value Prop ------->
 <div class="valueProp">
 <p id="intro">Our Story: <br>
@@ -93,11 +96,12 @@
 <br>
 <div></div>
 <br>
+<br>
 
 
 
 <!-------- Testimonials ------->
-<div class="row testimonials">
+<!-- <div class="row testimonials">
     <div class="column testimonial1 testimony">
       <img class="testimonial1Img" src="static/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="">
       <p class="testimonialBlurb"><span class="tName">Ingrid:</span> <br>I love using Mesh's service to meet fellow UX Managers. 
@@ -115,10 +119,12 @@
     </div>
   </div>
 
-
-
+<div class="w3-content w3-section" style="max-width:500px">
+  <p>The w3-animate-fading class animates an element in and out (takes about 10 seconds).</p>
+    <img class="mySlides w3-animate-fading" src= "{% static 'images/brooke-cagle-copy.jpg' %}">
+    <img class="mySlides w3-animate-fading" src= "{% static 'images/helena-lopes-copy.jpg' %}">
+    <img class="mySlides w3-animate-fading" src= "{% static 'images/priscilla-du-preez-copy.jpg' %}">
+</div> -->
+  
 {% endblock %}
-
-
-
 

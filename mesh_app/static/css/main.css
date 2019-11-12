@@ -31,15 +31,22 @@ body{
   width: 100%;
   background-color: #333;
   color: white;
-  text-align: center;
-  padding-top: .5%;
-  
+  float: left;
+  padding-top: 5px;
+  height: 35px;
+}
+
+.footerL {
+  padding-left: 20px;
+  padding-right: 20px;
+  float: right;
 }
 
  /* Company Name & Tagline */
 #coName {
   font-family: 'Orbitron', sans-serif;
   font-size: 36px;
+  color: #337ab7;
   margin-top: 50%;
   margin-left: 25px;
   display: inline; 
@@ -58,19 +65,16 @@ a {
 
 /* ------------------- LANDING PAGE ------------------- */
 /* ----------- Carousel --------- */
-.carousel {
-  height: 10%;
-}
-.item {
-  max-height: 100%;
-  height: 100%;
-  width: 100%;
-}
 
 .carousel-inner {
   /* margin-top: 15px; */
-  height: 20%;
+  /* height: 10%; */
+  align-content: center;
 }
+
+
+/* .caroImage1 {
+  padding-left: 100px; */
 
 .column {
   float: left;
@@ -80,16 +84,23 @@ a {
 
 /* ----------- Login Form --------- */
 
+.errorHandling {
+  height: 50px;
+  border: red solid 3px;
+  text-align: right;
+}
+
 .loginModule {
   float: right;
   border: black 1px solid;
   width: 40%;
   height: 300px;
   background-color:#f8f9fa;
+  /* padding-top: 100px; */
 }
 
 .signinForm {
-  margin-top: 5%;
+  margin-top: 10%;
   margin-left: 5%;
   padding-right: 5%;
 }
@@ -112,7 +123,7 @@ a {
 #intro {
   padding-top: 10px;
   font-size: 16px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-left: 5%;
 }
 
@@ -121,42 +132,41 @@ a {
 
 
 /* -------- Testimonials -------------------*/
-.testimonials {
+/* .testimonials {
   display: inline;
-}
+} */
 
-.testimonialTitle{
+/* .testimonialTitle{
   color: Red;
-}
+} */
 
 /*---testimonial write ups ------*/
-.testimonialBlurb {
-  max-width: 300px;
-  text-align: center;
-}
-
 .tName {
   font-weight: 700;
   font-size: 16px;
+  color: #337ab7;
 }
 
-/*------------------Layout-----------------*/
-
-
-/* Clear floats after the columns */
-/* .row:after {
-  content: "";
-  display: table;
-  clear: both;
-} */
-
-.testimony{
-  padding: 10px;
-  height: 500px;
+.testimony {
+  /* padding: 10px; */
+  height: 550px;
   text-align: center; 
-  border: 1px black solid;
+  /* border: 1px black solid; */
+
 }
 
+.testimonialBlurb {
+  margin-top: 20px;
+  margin-bottom: 10%;
+  align-content: center;
+  color: white;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-width: 300px;
+  text-align: center;
+  /* padding-left: 35%; */
+}
 
 /* - Testimonial Module 1 ----*/
 .testimonial1 {
@@ -164,11 +174,12 @@ a {
 }
 
 .testimonial1Img {
-  width: 300px;
+  width: 280px;
   height: 300px;
   border-radius: 50%;
-  border: solid 1px #000000;
-  margin-bottom: 30px;
+  /* border: solid 1px #000000; */
+  margin-top: 10px;
+  /* margin-bottom: 30px; */
   /* padding-left: 50px; */
 }
 
@@ -201,10 +212,7 @@ a {
   /* padding-left: 50px; */
 }
 
-.testimonialBlurb {
-  margin-bottom: 10%;
-  align-content: center;
-}
+
 
 
 
