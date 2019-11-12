@@ -3,20 +3,21 @@
 body{
   margin-bottom: 40px;
 }
+
 /* ------ Top Nav ---Bootstrap Overrides------- */
 
 .navbar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    min-height: 50px;
-    margin-bottom: 0px;
-    /* margin-right: auto; */
-    /* margin-left: auto; */
-    /* border: 2px solid transparent; */
-    border-radius: 0;
-
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 0px;
+  /* margin-right: auto; */
+  /* margin-left: auto; */
+  /* border: 2px solid transparent; */
+  border-radius: 0;
+  z-index: 20;
 }
 .navbar-header {
   margin-top: .5%;
@@ -59,16 +60,17 @@ a {
 /* ------------------- LANDING PAGE ------------------- */
 /* ----------- Carousel --------- */
 .carousel {
-    height: 10%;
+  height: 10%;
 }
 .item {
-    max-height: 50%;
-    max-width: 50%
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .carousel-inner {
-    margin-top: 15px;
-    height: 50%;
+  /* margin-top: 15px; */
+  height: 20%;
 }
 
 
@@ -302,6 +304,7 @@ a {
 .event-header:hover .buttons{
   transform: translateY(0px);
   display: block;
+  transition: .5s;
 }
 
 
@@ -394,11 +397,9 @@ h2 {
 /* --------------------------Form Styling------------------------- */
 
 .full-page-form{
-  /*padding: 20px 40px 60px 40px;*/
+  padding: 20px 40px 60px 40px;
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
-  
 }
 
 

@@ -16,9 +16,13 @@
     {% if user.is_authenticated %}
         <div class="buttons">
             {% if attending %}
-                <a href="{% url 'event_join' event_pk=event.pk pk=user.pk %}">Leave Event</a>
+                <a href="{% url 'event_join' event_pk=event.pk pk=user.pk %}">
+                    <button class="btn">Leave Event</button>
+                </a>
             {% else %}
-                <a href="{% url 'event_join' event_pk=event.pk pk=user.pk %}">Join Event</a>
+                <a href="{% url 'event_join' event_pk=event.pk pk=user.pk %}">
+                    <button class="btn">Join Event</button>
+                </a>
             {% endif %}
         </div>
     {% endif %}
@@ -31,7 +35,9 @@
         {{event.description}}
     </p>
     {% if delete_available %}
-        <a href="{% url 'event_edit' event_pk=event.pk %}">Edit</a>
+        <a href="{% url 'event_edit' event_pk=event.pk %}">
+            <button>Edit</button>
+        </a>
         <a href="{% url 'event_delete' event_pk=event.pk %}">Delete</a>
     {% endif %}
 </section>
