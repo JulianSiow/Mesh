@@ -6,7 +6,6 @@ class EventForm(forms.ModelForm):
         model = Event
         fields = ('title', 'date_time', 'location', 'capacity', 'description', 'picture', 'field', 'facebook', 'twitter', 'instagram')
         
-
 class UserForm(forms.ModelForm):
     class Meta:
         model = User

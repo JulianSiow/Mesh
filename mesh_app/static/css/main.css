@@ -4,6 +4,7 @@ body{
   margin-bottom: 40px;
   background-image: url(https://previews.123rf.com/images/weedezign/weedezign1710/weedezign171000215/88341428-grey-color-mesh-fabric-textile-texture-background-lattice-sport-wear-textured-.jpg)
 }
+
 /* ------ Top Nav ---Bootstrap Overrides------- */
 
 .navbar {
@@ -13,9 +14,6 @@ body{
   width: 100%;
   min-height: 50px;
   margin-bottom: 0px;
-  /* margin-right: auto; */
-  /* margin-left: auto; */
-  /* border: 2px solid transparent; */
   border-radius: 0;
   z-index: 20;
 }
@@ -47,7 +45,6 @@ body{
   font-family: 'Orbitron', sans-serif;
   font-size: 36px;
   color: #337ab7;
-  /* margin-top: 50%; */
   margin-left: 25px;
   display: inline; 
 }
@@ -55,7 +52,6 @@ body{
 #coTagLine {
   display: inline;
   padding-left: 50px;
-  vertical-align: center;
   color: white;
 }
 
@@ -66,35 +62,41 @@ a {
 /* ------------------- LANDING PAGE ------------------- */
 /* ----------- Carousel --------- */
 
-.carousel-inner > .item > img { 
-   margin: 0 auto;
+.carousel-inner {
+  align-content: center;
 }
- /* ^^^https://stackoverflow.com/questions/10591422/bootstrap-carousel-image-doesnt-align-properly thanks atrepp! */
+
 
 .column {
   float: left;
   width: 33%;
 }
 
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+  width: 100%;
+}
+
+.item{
+  height: 65vh;
+}
+
 /* ----------- Login Form --------- */
 
 .errorHandling {
-  height: 50px;
-  /* border: red solid 3px; */
+
   text-align: right;
 }
 
 .loginModule {
   float: right;
-  border: black 1px solid;
   width: 40%;
   height: 300px;
   background-color:#f8f9fa;
-  /* padding-top: 100px; */
 }
 
 .signinForm {
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: 5%;
   padding-right: 5%;
 }
@@ -107,28 +109,19 @@ a {
 /* ----------- Value Prop --------------- */
 .valueProp {
   float: left;
-  border: black 1px solid;
   width: 60%;
   height: 300px;
   background-color:#f8f9fa;
 }
 
 #intro {
-  padding-top: 10px;
+  padding-top: 5%;
   font-size: 16px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-left: 5%;
 }
 
 /* -------- Testimonials -------------------*/
-/* .testimonials {
-  display: inline;
-} */
-
-/* .testimonialTitle{
-  color: Red;
-} */
-
 /*---Testimonial Write Ups ------*/
 .tName {
   font-weight: 700;
@@ -137,10 +130,8 @@ a {
 }
 
 .testimony {
-  /* padding: 10px; */
   height: 550px;
   text-align: center; 
-  /* border: 1px black solid; */
 }
 
 .testimonialBlurb {
@@ -153,7 +144,6 @@ a {
   padding-right: 5px;
   max-width: 300px;
   text-align: center;
-  /* padding-left: 35%; */
 }
 
 /* - Testimonial Module 1 ----*/
@@ -165,10 +155,7 @@ a {
   width: 280px;
   height: 300px;
   border-radius: 50%;
-  /* border: solid 1px #000000; */
   margin-top: 10px;
-  /* margin-bottom: 30px; */
-  /* padding-left: 50px; */
 }
 
 /* - Testimonial Module 2 ----*/
@@ -181,9 +168,7 @@ a {
   height: 300px;
   border-radius: 50%;
   border: solid 1px #000000;
-  margin-bottom: 30px;
-  /* padding-left: 50px; */
-    
+  margin-bottom: 30px;    
 }
 
 /* - Testimonial Module 3 ----*/
@@ -197,9 +182,7 @@ a {
   border-radius: 50%;
   border: solid 1px #000000;
   margin-bottom: 30px;
-  /* padding-left: 50px; */
 }
-
 
 /* ------------------- PROFILE PAGE ------------------- */
 .event_sm_details{
@@ -215,7 +198,6 @@ a {
 .profile_card{
   height: 500px;
   width: 350px;
-  /*text-align: left;*/
   padding: 1%;
   padding-left: 2%;
 }
@@ -330,7 +312,6 @@ a {
   display: block;
   transition: .5s;
 }
-
 
 /* ----------- EVENT BROWSE PAGE ------ */
 .event_browse{

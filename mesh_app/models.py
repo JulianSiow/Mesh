@@ -21,7 +21,6 @@ class Profile(models.Model):
     def save_user_profile(sender, instance, **kwargs):
         instance.profile.save()
 
-
 class Event(models.Model):
     creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='events')
     title = models.CharField(max_length=100)
@@ -35,7 +34,6 @@ class Event(models.Model):
     twitter = models.TextField()
     instagram = models.TextField()
     
-
     def __str__(self):
         return f'{self.title} - {self.creator}'
 
