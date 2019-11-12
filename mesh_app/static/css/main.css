@@ -33,6 +33,7 @@ body{
   float: left;
   padding-top: 5px;
   height: 35px;
+  text-align: center;
 }
 
 .footerL {
@@ -88,7 +89,8 @@ a {
   background-color: #f8f9fa;
   text-align: right;
   color: red;
-  padding-right: 5%;
+  padding-top: 10px;
+  padding-right: 20%;
 }
 
 .loginModule {
@@ -105,8 +107,9 @@ a {
 }
 
 .btn {
-  background-color: rgba(103, 190, 103, 0.5);
+  background-color: #337AB7;
   margin-bottom: 10px;
+  color: whitesmoke;
 }
 
 /* ----------- Value Prop --------------- */
@@ -117,11 +120,20 @@ a {
   background-color:#f8f9fa;
 }
 
-#intro {
-  padding-top: 5%;
-  font-size: 16px;
+#introTitle {
+  padding-top: 3%;
+  font-weight: 700;
+  font-size: 18px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin-left: 5%;
+}
+
+#introBlurb {
+  /* padding-top: 5%; */
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 5%;
+
 }
 
 /* -------- Testimonials -------------------*/
