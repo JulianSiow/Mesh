@@ -244,7 +244,7 @@ a {
   font-size: 16px;
   color: blue;
   display: inline;
-  padding-left: 20px;    
+  padding-left: 20px;   
 }
 
 .profPict {
@@ -394,8 +394,10 @@ h2 {
 /* --------------------------Form Styling------------------------- */
 
 .full-page-form{
-  padding: 20px 40px 60px 40px;
+  /*padding: 20px 40px 60px 40px;*/
   max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
   
 }
 
