@@ -76,13 +76,13 @@
         <div class="bg-img">
           <form class="signinForm" action="{% url 'login' %}" method="POST">
                 {% csrf_token %}
-            <p>
+            <p class="form-group">
                 <label for="username">Username</label>
-                <input type='text' name='username' maxlength='20' minlength='4' required>
+                <input type='text' class="form-control" name='username' maxlength='20' minlength='4' required>
             </p>
-            <p>
+            <p class="form-group">
                 <label for="password">Password</label>
-                <input type='password' name='password' maxlength='20' minlength='4' required>
+                <input type='password' class="form-control" name='password' maxlength='20' minlength='4' required>
             </p>
             <button class="btn" type='submit'>Log In</button>
           </form>
@@ -98,18 +98,18 @@
 
 <!-------- Testimonials ------->
 <div class="row testimonials">
-    <div class="column testimonial1">
+    <div class="column testimonial1 testimony">
       <img class="testimonial1Img" src="static/images/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="">
       <p class="testimonialBlurb"><span class="tName">Ingrid:</span> <br>I love using Mesh's service to meet fellow UX Managers. 
         Being able to exchange ideas with people NOT out to take your spot is so invaluable!</p>
     </div>
-    <div class="column testimonial2">
+    <div class="column testimonial2 testimony">
       <img class="testimonial2Img" src="static/images/marius-ciocirlan-vMV6r4VRhJ8-unsplash.jpg" alt="">
       <p class="testimonialBlurb"><span class="tName">Jonathan:</span> <br> I found some fellow coders still holding onto old technologies like me. Working with them, reminiscing about
         the past and collectively smack talking the newer stuff has been very cathartic. I 
-       feel like we might be able to bring some of the old school ways back!</p>
+        feel like we might be able to bring some of the old school ways back!</p>
     </div>
-    <div class="column testimonial3">
+    <div class="column testimonial3 testimony">
       <img class="testimonial3Img" src="static/images/harps-joseph-tAvpDE7fXgY-unsplash.jpg" alt="">
       <p class="testimonialBlurb"><span class="tName">Lincoln:</span> <br> Amazing. That's all I got. Time to get back to coding. </p>
     </div>

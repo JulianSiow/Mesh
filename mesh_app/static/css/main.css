@@ -129,9 +129,9 @@ a {
 }
 
 /*------------------Layout-----------------*/
-.column {
-  float: center;
-  width: 33.33%;
+
+
+.testimony{
   padding: 10px;
   height: 500px;
   text-align: center; 
@@ -188,6 +188,10 @@ a {
 
 /* ------------------- PROFILE PAGE ------------------- */
 
+.column {
+  float: left;
+  width: 33%;
+}
 .profile_card{
   height: 500px;
   width: 350px;
@@ -228,13 +232,21 @@ a {
 
 
 /* ------------------- EVENTS ------------------- */
+  
 .event-header{
   height: 425px;
   width:100%;
+  display: flex;
+  position: relative;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative;
-  display: flex;
+}
+
+.event-header img{
+  min-width: 100%;
+  min-height:100%;
+  flex-shrink:0;
 }
 
 .event-info{
@@ -280,12 +292,14 @@ a {
     transition: 0.3s;
     border-radius: 10%;
     padding: 0 0 10px 0;
+    border: .5px black solid;
 }
 
 .event_image{
   height: 200px;
   width: 100%;
   border-radius: 10% 10% 0 0;
+  border: 1px black solid;
 }
 
 .event_card:hover{
@@ -300,10 +314,6 @@ a {
 
 /* ------------------- ABOUT US ------------------- */
 /* Three columns side by side */
-.column {
-  float: left;
-  width: 33%;
-}   
 
 /* Add some shadows to create a card effect */
 .card {
@@ -352,9 +362,11 @@ h2 {
   color: #337AB7;
 }
 
+/* --------------------------Form Styling------------------------- */
 
-
-
+.full-page-form{
+  padding: 20px 40px 60px 40px;
+}
 
 
 /* ------------------------------------- Sign Up Page ------------------------------- */

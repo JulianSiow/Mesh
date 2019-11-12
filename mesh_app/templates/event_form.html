@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
-<section>
+<section class="full-page-form">
     <h2>{{header}}</h2>
     <form method="POST">
         {% csrf_token %}
-        {{form.as_p}}
-        <button type="submit">Save</button>
-        <button>
-            <a href="{% url 'event_page' event_pk=event.pk %}">Cancel</a>
+        {{ form|crispy }}
+        <button type="submit" class="btn">Save</button>
+        <button class="btn">
+            <a href="{% url 'user' %}">Cancel</a>
         </button>
     </form>
 </section>
