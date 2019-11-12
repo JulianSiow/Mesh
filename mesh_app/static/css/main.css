@@ -1,6 +1,8 @@
 
 /* -------------------GLOBAL ITEMS -------------------- */
-
+body{
+  margin-bottom: 40px;
+}
 /* ------ Top Nav ---Bootstrap Overrides------- */
 
 .navbar {
@@ -228,7 +230,9 @@ a {
   height: 60%;
   width: 100%;
 }
-
+.profile_container{
+  background-color: #f8f9fa;
+}
 .profField {
   font-size: 18px;
   font-weight: 400;
@@ -272,7 +276,7 @@ a {
 }
 
 .event-info{
-  padding: 10px;
+  padding: 5px, 10px, 8%, 2%;
 }
 
 .event_dt{
@@ -304,7 +308,7 @@ a {
 /* ----------- EVENT BROWSE PAGE ------ */
 
 #columns {
-    padding: 0 2% 15px 2%;
+    padding: 0 2% 40px 2%;
 }
 
 .event_card {
