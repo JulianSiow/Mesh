@@ -11,10 +11,10 @@
         <p class="profField">Field:</p> <p class="profFieldVal">{{user.profile.field}}</p><br>
         <p class="profField">Portfolio:</p> <p class="profFieldVal">{{user.profile.portfolio_link}}</p><br>
         <p class="profField">Linkedin:</p> <p class="profFieldVal">{{user.profile.linkedin}}</p><br>
-        <button class="profBut" type="click">
+        <button type="click" class="btn btn-secondary">
         <a href="{% url 'profile_edit' pk=user.pk %}">Edit Profile</a>
         </button>
-        <button class="profBut" type="reset">
+        <button type="reset" class="btn btn-secondary">
             <a href="{% url 'event_create' pk=user.pk %}">New Event</a>
         </button>
     </div>

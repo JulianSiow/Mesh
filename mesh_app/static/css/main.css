@@ -206,10 +206,6 @@ a {
 
 
 /* ------------------- PROFILE PAGE ------------------- */
-
-td {
-  display: table-cell;
-}
 .event_sm_details{
   font-size: 12px;
 }
@@ -244,14 +240,14 @@ td {
 .profField {
   font-size: 18px;
   font-weight: 400;
-  color: red;
+  color: rgba(103, 190, 103);
   display: inline;
   text-align: left;
 }
 
 .profFieldVal {
   font-size: 16px;
-  color: blue;
+  color:#337ab7;
   display: inline;
   padding-left: 20px;
 }
