@@ -2,7 +2,8 @@
 /* -------------------GLOBAL ITEMS -------------------- */
 body{
   margin-bottom: 40px;
-  background-image: url(https://previews.123rf.com/images/weedezign/weedezign1710/weedezign171000215/88341428-grey-color-mesh-fabric-textile-texture-background-lattice-sport-wear-textured-.jpg)
+  background-color: #f8f9fa;
+  /* background-image: url(https://previews.123rf.com/images/weedezign/weedezign1710/weedezign171000215/88341428-grey-color-mesh-fabric-textile-texture-background-lattice-sport-wear-textured-.jpg) */
 }
 
 /* ------ Top Nav ---Bootstrap Overrides------- */
@@ -84,8 +85,10 @@ a {
 /* ----------- Login Form --------- */
 
 .errorHandling {
-
+  background-color: #f8f9fa;
   text-align: right;
+  color: red;
+  padding-right: 5%;
 }
 
 .loginModule {
@@ -241,9 +244,9 @@ a {
   text-align: center;
   font-size: 44px;
   font-weight: 400;
-  color: blue;
+  color: #337ab7;
   font-family:"Oswald", sans-serif;
-  display:block;
+  display: block;
 }
 
 
