@@ -6,17 +6,17 @@
     <div class = "profile_border">
     <img class ="profile_image"src="{{user.profile.prof_pic}}">
     <div class="profile_container">
-        <p class="profField">First Name:</p> <p class="profFieldVal">{{user.first_name}}</p><br>
-        <p class="profField">Last Name:</p> <p class="profFieldVal">{{user.last_name}}</p><br>
-        <p class="profField">Field:</p> <p class="profFieldVal">{{user.profile.field}}</p><br>
-        <p class="profField">Portfolio:</p> <p class="profFieldVal">{{user.profile.portfolio_link}}</p><br>
-        <p class="profField">Linkedin:</p> <p class="profFieldVal">{{user.profile.linkedin}}</p><br>
-        <button type="click" class="btn btn-secondary">
-        <a href="{% url 'profile_edit' pk=user.pk %}">Edit Profile</a>
-        </button>
-        <button type="reset" class="btn btn-secondary">
-            <a href="{% url 'event_create' pk=user.pk %}">New Event</a>
-        </button>
+        <p class="profField">First Name:</p><p class="profFieldVal">{{user.first_name}}</p><br>
+        <p class="profField">Last Name:</p><p class="profFieldVal">{{user.last_name}}</p><br>
+        <p class="profField">Field:</p><p class="profFieldVal">{{user.profile.field}}</p><br>
+        <p class="profField">Portfolio:</p><p class="profFieldVal">{{user.profile.portfolio_link}}</p><br>
+        <p class="profField">LinkedIn:</p><p class="profFieldVal">{{user.profile.linkedin}}</p> <br>
+        <a href="{% url 'profile_edit' pk=user.pk %}">
+            <button class="btn btn-secondary">Edit Profile</button>
+        </a>
+        <a href="{% url 'event_create' pk=user.pk %}">
+            <button class="btn btn-secondary">Create Event</button>
+        </a>
     </div>
     </div>
 </div>
