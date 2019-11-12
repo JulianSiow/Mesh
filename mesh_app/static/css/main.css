@@ -141,6 +141,13 @@ a {
   clear: both;
 } */
 
+.testimony{
+  padding: 10px;
+  height: 500px;
+  text-align: center; 
+  border: 1px black solid;
+}
+
 
 /* - Testimonial Module 1 ----*/
 .testimonial1 {
@@ -304,12 +311,14 @@ a {
     transition: 0.3s;
     border-radius: 10%;
     padding: 0 0 10px 0;
+    border: .5px black solid;
 }
 
 .event_image{
   height: 200px;
   width: 100%;
   border-radius: 10% 10% 0 0;
+  border: 1px black solid;
 }
 
 .event_card:hover{
