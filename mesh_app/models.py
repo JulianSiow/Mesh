@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 # Create your models here.
 
@@ -8,19 +10,19 @@ class Profile(models.Model):
     prof_pic = models.TextField()
     field = models.CharField(max_length=100)
     portfolio_link = models.TextField()
-    events = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='creator')
+    linkedin = models.TextField()
 
-    @reciever(post_save, sender=User)
+    @receiver(post_save, sender=User)
     def create_user_profile(sender, instance, created, **kwargs):
         if created:
             Profile.objects.create(user=instance)
     
-    @reciever(post_save, sender=User)
+    @receiver(post_save, sender=User)
     def save_user_profile(sender, instance, **kwargs):
         instance.profile.save()
 
-
 class Event(models.Model):
+    creator = models.ForeignKey(User, on_delete=models.CASCADE, related_name='events')
     title = models.CharField(max_length=100)
     date_time = models.DateTimeField()
     location = models.TextField(max_length=100)
@@ -28,8 +30,17 @@ class Event(models.Model):
     description = models.TextField(max_length=255)
     picture = models.TextField()
     field = models.CharField(max_length=100)
-    attendees = models.ForeignKey(User, on_delete=models.DO_NOTHING)
-
+    facebook = models.TextField()
+    twitter = models.TextField()
+    instagram = models.TextField()
+    
     def __str__(self):
-        return f'{self.title} - {self.user}'
+        return f'{self.title} - {self.creator}'
 
+class Attendees(models.Model):
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='attendees')
+    attendee = models.ForeignKey(User, on_delete=models.CASCADE, related_name='attendees')
+
+class Friends(models.Model):
+    friend1 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friend2')
+    friend2 = models.ForeignKey(User, on_delete=models.CASCADE, related_name='friend1')

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="profile_card col-md-4">
+    <div class = "profile_border">
+    <img class ="profile_image"src="{{user.profile.prof_pic}}">
+    <div class="profile_container">
+        <p class="profField">First Name:</p><p class="profFieldVal">{{user.first_name}}</p><br>
+        <p class="profField">Last Name:</p><p class="profFieldVal">{{user.last_name}}</p><br>
+        <p class="profField">Field:</p><p class="profFieldVal">{{user.profile.field}}</p><br>
+        <p class="profField">Portfolio:</p><a class="profFieldVal" href="{{user.profile.portfolio_link}}">{{user.profile.portfolio_link}}</a><br>
+        <p class="profField">LinkedIn:</p><a class="profFieldVal" href="{{user.profile.linkedin}}">{{user.profile.linkedin}} </a> <br>
+        <a href="{% url 'profile_edit' pk=user.pk %}">
+            <button class="btn btn-secondary">Edit Profile</button>
+        </a>
+        <a href="{% url 'event_create' pk=user.pk %}">
+            <button class="btn btn-secondary">Create Event</button>
+        </a>
+    </div>
+    </div>
+</div>
+
+<section>
+    <h2 class ="attending_header"> <b>Events You're Attending!</b> </h2>
+{% for event in my_events %}
+<div class="col-md-4" id ="columns">
+    <div class="event_card" >
+    <a href="{% url 'event_page' event_pk=event.event.pk %}">
+    <img class ="event_image"src="{{event.event.picture}}">
+        <div class="event_container">
+            <h4 class = "event_title"><b>{{event.event.title}}</b></h4>
+            <p> <b>Location</b>: {{event.event.location}} <br>
+            <b>When</b>: {{event.event.date_time}}</p>
+        </div>
+    </a>
+    </div>
+</div>
+</section>
+
+{% endfor %}
+
+{% endblock %}

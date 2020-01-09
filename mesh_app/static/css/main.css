@@ -1,0 +1,451 @@
+
+/* -------------------GLOBAL ITEMS -------------------- */
+body{
+  margin-bottom: 40px;
+  background-color: #f8f9fa;
+}
+
+/* ------ Top Nav ---Bootstrap Overrides------- */
+
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 50px;
+  margin-bottom: 0px;
+  border-radius: 0;
+  z-index: 20;
+}
+.navbar-header {
+  margin-top: 9px;
+}
+
+/* -- Footer ---- */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  float: left;
+  padding-top: 5px;
+  height: 35px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.footerL {
+  padding-left: 20px;
+  padding-right: 20px;
+  float: right;
+}
+
+ /* Company Name & Tagline */
+#coName {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+  color: #337ab7;
+  margin-left: 25px;
+  display: inline; 
+}
+
+#coTagLine {
+  display: inline;
+  padding-left: 50px;
+  color: white;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* ------------------- LANDING PAGE ------------------- */
+/* ----------- Carousel --------- */
+
+.carousel-inner {
+  align-content: center;
+  background-position:center bottom;
+}
+
+
+.column {
+  float: left;
+  width: 33%;
+}
+
+.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img {
+  width: 100%;
+}
+
+.item{
+  height: 65vh;
+}
+
+/* ----------- Login Form --------- */
+.errorHandling {
+  background-color: #f8f9fa;
+  text-align: right;
+  color: red;
+  padding-top: 10px;
+  padding-right: 20%;
+}
+
+.loginModule {
+  float: right;
+  width: 40%;
+  height: 300px;
+  background-color:#f8f9fa;
+}
+
+.signinForm {
+  margin-top: 5%;
+  margin-left: 5%;
+  padding-right: 5%;
+}
+
+.btn {
+  background-color: #337AB7;
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+
+/* ----------- Value Prop --------------- */
+.valueProp {
+  float: left;
+  width: 60%;
+  height: 300px;
+  background-color:#f8f9fa;
+}
+
+#introTitle {
+  padding-top: 3%;
+  font-weight: 700;
+  font-size: 18px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-left: 5%;
+}
+
+#introBlurb {
+  /* padding-top: 5%; */
+  font-size: 14px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 5%;
+
+}
+
+/* -------- Testimonials -------------------*/
+/*---Testimonial Write Ups ------*/
+.tName {
+  font-weight: 700;
+  font-size: 16px;
+  color: #337ab7;
+}
+
+.testimony {
+  height: 550px;
+  text-align: center; 
+}
+
+.testimonialBlurb {
+  margin-top: 20px;
+  margin-bottom: 10%;
+  align-content: center;
+  color: white;
+  font-size: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* - Testimonial Module 1 ----*/
+.testimonial1 {
+  background-color: #aaa;
+}
+
+.testimonial1Img {
+  width: 280px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+/* - Testimonial Module 2 ----*/
+.testimonial2 {
+  background-color: #bbb;
+}
+
+.testimonial2Img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 1px #000000;
+  margin-bottom: 30px;    
+}
+
+/* - Testimonial Module 3 ----*/
+.testimonial3 {
+  background-color: #aaa;
+}
+
+.testimonial3Img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: solid 1px #000000;
+  margin-bottom: 30px;
+}
+
+/* ------------------- PROFILE PAGE ------------------- */
+.event_sm_details{
+  font-size: 12px;
+}
+.event_title{
+  font-size: 16px;
+  margin-top: 1%;
+  margin-bottom:0;
+  min-height: 40px;
+}
+
+.profile_card{
+  height: 500px;
+  width: 350px;
+  padding: 1%;
+  padding-left: 2%;
+}
+
+.profile_border{
+  border: 2px solid black;
+  border-width: thin;
+}
+
+.profile_image{
+  height: 70%;
+  width: 100%;
+}
+
+.profile_container{
+  background-color: #f8f9fa;
+  padding-left: 2%;
+}
+
+.profField {
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(103, 190, 103);
+  display: inline;
+  text-align: left;
+}
+
+.profFieldVal {
+  font-size: 16px;
+  color:#337ab7;
+  display: inline;
+  padding-left: 20px;
+  word-wrap: break-word;
+}
+
+.profPict {
+  border: red 2px solid;
+    
+}
+
+.attending_header{
+  text-align: center;
+  font-size: 44px;
+  font-weight: 400;
+  color: #337ab7;
+  font-family:"Oswald", sans-serif;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ------------------- EVENTS ------------------- */
+  
+.event-header{
+  height: 425px;
+  width:100%;
+  display: flex;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.event-header img{
+  min-width: 100%;
+  min-height:100%;
+  flex-shrink:0;
+}
+
+.event_title {
+  background-color: #337AB7;
+  color: whitesmoke;
+  font-size: 22px;
+  padding-top: 10px;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+}
+.event_details {
+  color: whitesmoke;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 18px;
+  background-color: #337AB7;
+}
+
+.event-info{
+  padding: 5px, 10px, 0, 2%;
+  padding-left: 1%;
+} 
+
+.event-info2{
+  background-color:#f8f9fa;
+}
+
+.event-type{
+  font-size: 20px;
+  margin: 0;
+  padding-left: 10px;
+}
+
+.event-description{
+  padding-bottom: 1%;
+  padding-left: 10px;
+}
+
+.event_dt{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.event-header:hover{
+  transform: translateY(0px);
+  position: relative;
+  display: flex;
+}
+
+.buttons{
+  position: absolute;
+  display:none;
+  right: 50px;
+  bottom: 25px;
+  transform: translateY(80px);
+}
+
+.event-header:hover .buttons{
+  transform: translateY(0px);
+  display: block;
+  transition: .5s;
+}
+
+/* ----------- EVENT BROWSE PAGE ------ */
+.event_browse{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#columns {
+  padding: 0 2% 40px 2%;
+  padding-left: 5%;
+}
+
+.event_card {
+  height: 100%;
+  max-height: 310px;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 10%;
+  padding: 0 0 10px 0;
+  border: 1px black solid;
+  background-color:#f8f9fa;
+}
+
+.event_image{
+  height: 200px;
+  width: 100%;
+  border-radius: 10% 10% 0 0;
+  border: 1px black solid;
+}
+
+.event_card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.event_container {
+  border: 3px;
+  border-color: solid black;
+  text-align: center;
+  height:100%;
+  width:100%;
+}
+
+/* ------------------- ABOUT US ------------------- */
+/* Three columns side by side */
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(20, 3, 114, 0.2);
+  margin-left: 40px;
+  padding: 20px;
+  background-color: rgba(255,255,255,0.1);
+}
+  
+/* Some left and right padding inside the container */
+.container {
+  padding: 1px 16px;
+}
+  
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display:table;
+}
+  
+.title {
+  color: grey;
+}
+
+.team {
+  height: 220px;
+  background-color:#f8f9fa;
+  border: 2px solid black;
+}
+
+.teamPic {
+  margin: 20px;
+  width: 20% !important;
+  height: 90% !important; 
+  border-radius: 20%;
+  border: solid 2px grey;
+  float: right;
+}
+
+.aboutBlurb {
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 20px;
+} 
+
+h2 {
+  color: #337AB7;
+}
+
+/* --------------------------Form Styling------------------------- */
+
+.full-page-form{
+  padding: 20px 40px 60px 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+
+

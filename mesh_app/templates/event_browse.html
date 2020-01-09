@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h2 class ="event_browse"> Upcoming Events </h2>
+{% for event in event %}
+<div class="col-sm-4" id ="columns">
+    <div class="event_card" >
+        <a href="{% url 'event_page' event_pk=event.pk %}">
+        <img class ="event_image"src="{{event.picture}}">
+        <div class="event_container">
+        <h4 class ="event_title"><b>{{event.title}}</b></h4>
+        <p class ="event_sm_details"> <b>Location</b>: {{event.location}} <br>
+        <b>When</b>: {{event.date_time}}</p>
+        </div>
+        </a>
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
+
+Picture:

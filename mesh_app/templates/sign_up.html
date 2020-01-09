@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="full-page-form">
+
+    <form action="{% url 'register' %}" method="POST">
+        {% csrf_token %}
+        <p class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" name="first_name" maxlength="25" minlength="2" required>
+        </p>
+        <p class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" name="last_name" maxlength="25" minlength="2" required>
+        </p>
+        <p class="form-group">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" maxlength="25" minlength="4" required>
+        </p>
+        <p class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" maxlength="25" minlength="3" required placeholder="john@doe.com">
+        </p>
+        <p class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" maxlength="25" minlength="6" required>
+        </p>
+        <p class="form-group">
+            <label for="password2">Confirm your password</label>
+            <input type="password" class="form-control" name="password2" maxlength="25" minlength="6" required>
+        </p>
+        <p class="form-group">
+            <label for="prof_pic">Link to a profile picture</label>
+            <input type="text" class="form-control" name="prof_pic" placeholder="Let's see who you are">
+        </p>
+        <p class="form-group">
+            <label for="field">What field are you employed in?</label>
+            <input type="text" class="form-control" name="field" placeholder="Engineering, UX...">
+        </p>
+        <p class="form-group">
+            <label for="portfolio_link">Link to your portfolio</label>
+            <input type="text" class="form-control" name="portfolio_link" placeholder="Personal website or like">
+        </p>
+        <p class="form-group">
+            <label for="linkedin">Linkedin</label>
+            <input type="text" class="form-control" name="linkedin"placeholder="www.linkedin.com/xxxxxx">
+        </p>
+        <button class="btn" type="submit">Sign Up</button>
+    </form>
+
+<div class="row testimonials">
+        <div class="column testimonial1 testimony">
+          <img class="testimonial1Img" src= "{% static 'images/michael-dam-mEZ3PoFGs_k-unsplash.jpg' %}">
+          <p class="testimonialBlurb"><span class="tName">Ingrid:</span> <br>I love using Mesh's service to meet fellow UX Managers. 
+            Being able to exchange ideas with people NOT out to take your spot is so invaluable!</p>
+        </div>
+        <div class="column testimonial2 testimony">
+          <img class="testimonial1Img" src= "{% static 'images/marius-ciocirlan-vMV6r4VRhJ8-unsplash.jpg' %}">
+          <p class="testimonialBlurb"><span class="tName">Jonathan:</span> <br> I found some fellow coders still holding onto old technologies like me. Working with them, reminiscing about
+            the past and collectively smack talking the newer stuff has been very cathartic. I 
+            feel like we might be able to bring some of the old school ways back!</p>
+        </div>
+        <div class="column testimonial3 testimony">
+         <img class="testimonial1Img" src= "{% static 'images/harps-joseph-tAvpDE7fXgY-unsplash.jpg' %}">
+          <p class="testimonialBlurb"><span class="tName">Lincoln:</span> <br> Amazing. That's all I have to say. Lots to do, time to get back to coding. </p>
+        </div>
+      </div>
+    </section>
+
+
+{% endblock %}
